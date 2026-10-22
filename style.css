@@ -1,0 +1,32 @@
+
+:root{--ink:#000;--paper:#fff;--grey:#ccc;--mid:#808080}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit}:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.nav{position:sticky;top:0;z-index:30;background:var(--paper);border-bottom:1px solid #0002;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.9rem 2rem;font-size:.9rem;flex-wrap:wrap}
+.nav>a{font-weight:800;text-decoration:none}.nav ul{display:flex;gap:1.6rem;list-style:none}
+.nav li{position:relative}.nav li>a{text-decoration:none;padding:.3rem 0}.nav li>a:hover,.nav a.on{border-bottom:2px solid var(--ink)}
+.dd ul{display:none;position:absolute;right:0;top:100%;background:var(--paper);border:1px solid var(--ink);min-width:230px;padding:.5rem 0;flex-direction:column;gap:0}
+.dd:hover ul,.dd:focus-within ul{display:flex}.dd ul a{display:block;padding:.4rem 1rem;text-decoration:none}.dd ul a:hover{background:var(--grey)}
+h1,h2,h3{line-height:.98;letter-spacing:-.03em;text-transform:uppercase;font-weight:800}
+h1{font-size:clamp(2.8rem,10vw,9rem)}h2{font-size:clamp(2rem,5.5vw,4.5rem);margin-bottom:1.5rem}h3{font-size:1.4rem;margin-bottom:.5rem}
+.it{font-style:italic;font-weight:400;text-transform:none;letter-spacing:-.01em}
+.wrap{max-width:1180px;margin:0 auto;padding:0 2rem}section{padding:6rem 0}.grey{background:var(--grey)}.dark{background:#000;color:#fff}
+p{max-width:62ch;margin-bottom:1rem}.sub{font-size:clamp(1.1rem,2.2vw,1.8rem);margin-top:1rem}
+.hero{padding:5rem 0 0;min-height:calc(100vh - 56px);display:flex;flex-direction:column;justify-content:space-between}
+.cal{width:100%;display:block;touch-action:none;margin-top:3rem}.cal .jaw{cursor:ew-resize}
+.rd{font-variant-numeric:tabular-nums}.hint{font-size:.8rem;color:var(--mid);padding:0 2rem 1.2rem}
+.rows{border-top:2px solid #000}.row{display:grid;grid-template-columns:5rem 1fr 14rem 11rem;gap:1.5rem;align-items:center;padding:2rem 1rem;border-bottom:2px solid #000;text-decoration:none;transition:background .2s,padding .2s}
+.row:hover{background:var(--grey);padding-left:2rem}.row h3{font-size:clamp(1.6rem,4vw,3.2rem);margin:0}.row .n{font-size:3rem;font-weight:800}.row small{display:block;color:var(--mid);font-size:.95rem;text-transform:none;letter-spacing:0;font-weight:400;margin-top:.4rem}
+.row img{width:100%;max-height:120px;object-fit:contain}.st{font-size:.9rem}.st b{display:block}
+@media(max-width:800px){.row{grid-template-columns:3rem 1fr}.row .st,.row .th{grid-column:2}}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}@media(max-width:800px){.cols{grid-template-columns:1fr}}
+figure img{width:100%;display:block}figcaption{font-size:.85rem;color:var(--mid);margin-top:.5rem}.dark figcaption{color:#bbb}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin:2rem 0}
+.gal img{aspect-ratio:3/4;object-fit:cover}.gal.l img{aspect-ratio:4/3}.gal.r img{aspect-ratio:3/4;object-fit:contain;background:#c8ccd4}.gal.d img{aspect-ratio:4/3;object-fit:contain;background:#fff;border:1px solid #0003}video{width:100%;display:block;background:#000}
+.big{display:flex;gap:1.2rem;align-items:baseline;margin-bottom:1rem}.big span{font-size:clamp(3rem,8vw,7rem);font-weight:800;line-height:.9}
+.ph{border:2px dashed var(--mid);padding:3.5rem 2rem;margin:1.5rem 0;text-align:center;color:var(--mid)}.ph strong{display:block;color:var(--ink);font-size:1.5rem;text-transform:uppercase;margin-bottom:.3rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}.card{padding:1.8rem}.card:nth-child(odd){background:var(--grey)}.card:nth-child(even){background:var(--mid);color:#000}
+.card svg{width:100%;max-width:200px;display:block;margin-bottom:1rem}.card b{display:block;margin-top:.8rem}.card p{margin:0}
+footer{background:#000;color:#fff;padding:4rem 2rem 2rem}footer .wm{font-size:clamp(4rem,17vw,16rem);font-weight:800;line-height:.85;letter-spacing:-.05em;text-transform:uppercase}
+footer .g{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem;margin-top:3rem;font-size:.9rem}footer a{text-underline-offset:3px}footer h4{margin-bottom:.5rem}
