@@ -1,24 +1,146 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Home | Group 7 | CM3D</title><link rel="stylesheet" href="style.css"></head><body><header class="nav"><a href="index.html">Group 7 &middot; CM3D</a><nav aria-label="Main"><ul><li><a href="index.html" class="on">Home</a></li><li class="dd"><a href="fase1.html">Phase 1 &#9662;</a><ul><li><a href="fase1.html#s01">01 &nbsp;The object</a></li><li><a href="fase1.html#s02">02 &nbsp;Disassembly</a></li><li><a href="fase1.html#s03">03 &nbsp;Measuring</a></li><li><a href="fase1.html#s04">04 &nbsp;Modeling</a></li><li><a href="fase1.html#s05">05 &nbsp;Assembly & drawings</a></li><li><a href="fase1.html#s06">06 &nbsp;Challenges</a></li></ul></li><li><a href="fase2.html">Phase 2</a></li><li><a href="fase3.html">Phase 3</a></li><li><a href="nosotros.html">About us</a></li></ul></nav></header><main><div class="hero"><div class="wrap"><h1>Conceção e<br>Modelação 3D</h1><p class="sub it">Group 7 &middot; Mestrado em Engenharia e Design de Produto &middot; 2026/27</p>
-<svg id="cal" class="cal" viewBox="0 0 1000 230" role="img" aria-label="Interactive vernier caliper. Drag the jaw."></svg></div><p class="hint">Drag the jaw. We measure everything twice.</p></div>
-<section><div class="wrap"><h2>Three phases,<br>three objects</h2><div class="rows"><a class="row" href="fase1.html"><span class="n">1</span><h3>Base<small>Reverse engineering of a desk lamp, in SolidWorks.</small></h3><div class="st"><b>20 Oct</b>Phase 1 &middot; complete</div><div class="th"><img src="img/lamp.jpg" alt="The desk lamp, unfolded"></div></a><a class="row" href="fase2.html"><span class="n">2</span><h3>Consolidation<small>Object still unknown. We are as curious as you.</small></h3><div class="st"><b>Due 17 Nov</b>Phase 2 &middot; coming soon</div><div class="th"></div></a><a class="row" href="fase3.html"><span class="n">3</span><h3>Exploration<small>Free topic. Free-range chaos, probably.</small></h3><div class="st"><b>Due 22 Dec</b>Phase 3 &middot; coming soon</div><div class="th"></div></a></div></div></section><section class="grey"><div class="wrap"><h2>A website,<br>not a report</h2><p>This is where our work for the course lives: what we measured, what went wrong, and what we learned along the way. Pick a phase, or meet the people who did the work.</p><p><a href="nosotros.html"><b>About us</b></a></p></div></section></main><footer><div class="wm">Group 7</div><div class="g">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Home | Group 7 | CM3D</title><link rel="stylesheet" href="style.css">
+<style>
+/* ===== Live timeline (caliper) ===== */
+.hero{background:var(--hero,#fff);color:var(--hero-ink,#000);padding-top:3rem;transition:background-color .6s,color .6s}
+.hero h1{font-size:clamp(2.4rem,5.3vw,5.6rem)}
+.hero .sub{margin-top:.4rem}
+.hero .hint{color:inherit;opacity:.75}
+.tl{margin-top:1.5rem}
+.tl .cal{margin-top:0;color:inherit}
+.tl svg{width:100%;height:auto;display:block;touch-action:none;cursor:pointer;user-select:none}
+.tl .jaw{cursor:grab}.tl .jaw:active{cursor:grabbing}
+.tl .jaw:focus{outline:none}.tl .jaw:focus-visible rect{stroke-width:4}
+.tl-read{display:grid;grid-template-columns:minmax(200px,auto) 1fr;gap:2rem;align-items:center;margin-top:1rem}
+.tl-date{font-weight:800;font-size:clamp(2.6rem,7vw,4.6rem);line-height:.95;letter-spacing:-.02em}
+.tl-date small{display:block;font-size:.85rem;font-weight:400;letter-spacing:0;margin-top:.6rem}
+.tl-date button{font:inherit;background:none;border:0;padding:0;text-decoration:underline;cursor:pointer}
+.tl-card{display:flex;gap:1.2rem;align-items:center;text-decoration:none;color:inherit;border:2px solid #000;background:#fff;padding:.8rem;max-width:600px;transition:transform .15s,box-shadow .15s}
+.tl-card:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 #000}
+.tl-card img,.tl-ph{width:150px;height:112px;object-fit:cover;flex:none;background:#eee}
+.tl-ph{display:flex;align-items:center;justify-content:center;font-size:3.5rem;font-weight:800;background:repeating-linear-gradient(45deg,#eee 0 10px,#e2e2e2 10px 20px)}
+.tl-tag{display:inline-block;font-size:.72rem;font-weight:700;padding:.25rem .55rem;letter-spacing:.05em;text-transform:uppercase;background:var(--pc,#000);color:var(--pi,#fff)}
+.tl-card h3{margin:.5rem 0 .15rem;font-size:1.6rem;line-height:1.1;text-transform:none;letter-spacing:-.01em}
+.tl-card p{margin:0;font-style:italic;color:#000}
+.tl-card{color:#000}
+.tl-card .go{display:block;margin-top:.5rem;font-size:.85rem;font-weight:700}
+.row .n{transition:color .2s}
+@media (max-width:640px){.tl-read{grid-template-columns:1fr;gap:1rem}.tl-card img,.tl-ph{width:100px;height:80px}}
+</style></head><body><header class="nav"><a href="index.html">Group 7 &middot; CM3D</a><nav aria-label="Main"><ul><li><a href="index.html" class="on">Home</a></li><li class="dd"><a href="fase1.html">Phase 1 &#9662;</a><ul><li><a href="fase1.html#s01">01 &nbsp;The object</a></li><li><a href="fase1.html#s02">02 &nbsp;Disassembly</a></li><li><a href="fase1.html#s03">03 &nbsp;Measuring</a></li><li><a href="fase1.html#s04">04 &nbsp;Modeling</a></li><li><a href="fase1.html#s05">05 &nbsp;Assembly & drawings</a></li><li><a href="fase1.html#s06">06 &nbsp;Challenges</a></li></ul></li><li><a href="fase2.html">Phase 2</a></li><li><a href="fase3.html">Phase 3</a></li><li><a href="nosotros.html">About us</a></li></ul></nav></header><main><div class="hero"><div class="wrap"><h1>Conceção e Modelação 3D</h1><p class="sub it">Group 7 &middot; Mestrado em Engenharia e Design de Produto &middot; 2026/27</p>
+<div class="tl">
+<svg id="cal" class="cal" viewBox="0 0 1000 200" role="img" aria-label="Course timeline drawn as a vernier caliper. Drag the jaw to travel through the semester."></svg>
+<div class="tl-read" aria-live="polite">
+<div class="tl-date"><span id="tlDay">&nbsp;</span><small id="tlNote">Today</small></div>
+<a class="tl-card" id="tlCard" href="fase2.html"><span id="tlMedia"></span><div><span class="tl-tag" id="tlTag">&nbsp;</span><h3 id="tlTitle">&nbsp;</h3><p id="tlLine">&nbsp;</p><span class="go">See this phase &rarr;</span></div></a>
+</div>
+</div></div><p class="hint">Drag the jaw through the semester. We measure everything twice, even time.</p></div>
+<section><div class="wrap"><h2>Three phases,<br>three objects</h2><div class="rows"><a class="row" href="fase1.html" data-phase="0"><span class="n">1</span><h3>Base<small>A desk lamp, reverse-engineered in SolidWorks. The illusion of simplicity.</small></h3><div class="st"><b>20 Oct</b>Phase 1 &middot; complete</div><div class="th"><img src="img/lamp.jpg" alt="The desk lamp, unfolded"></div></a><a class="row" href="fase2.html" data-phase="1"><span class="n">2</span><h3>Consolidation<small>A steam iron with a water tank and boiler base. The nightmare of complexity.</small></h3><div class="st"><b>17 Nov</b>Phase 2 &middot; happening now</div><div class="th"><img src="img/iron.jpg" alt="The Flama Jetpress steam iron on its base"></div></a><a class="row" href="fase3.html" data-phase="2"><span class="n">3</span><h3>Exploration<small>Free topic. Something that lets us sleep at night.</small></h3><div class="st"><b>22 Dec</b>Phase 3 &middot; coming next</div><div class="th"><img src="img/fase3.jpg" alt="A mystery object under a blanket: Phase 3 is still to come"></div></a></div></div></section><section class="grey"><div class="wrap"><h2>A website,<br>not a report</h2><p>This is where our work for the course lives: what we measured, what went wrong, and what we learned along the way. Pick a phase, or meet the people who did the work.</p><p><a href="nosotros.html"><b>About us</b></a></p></div></section></main><footer><div class="wm">Group 7</div><div class="g">
 <div><h4>Universidade de Aveiro</h4>Mestrado em Engenharia e Design de Produto<br>Conceção e Modelação 3D &middot; 2026/27</div>
 <div><h4>Teachers</h4>João Oliveira<br>Daniel Rodrigues</div>
 <div><h4>Group</h4>Inês Santos &middot; João Almeida<br>Lucía Expósito &middot; Martín Martínez</div>
 <div><h4>Contact us</h4><a href="mailto:grupo7.cm3d@example.com">grupo7.cm3d@example.com</a><br>Questions, feedback, or a lamp you want modeled.</div></div>
-<p style="font-size:0.8rem; opacity:0.7; max-width:60ch; margin-top:2rem;"><strong>AI use statement.</strong> Generative AI (Claude, Anthropic) supported the development of this website and the proofreading/translation of some texts. All 3D modeling, measurements, assemblies, technical drawings, renders and photographs are the group's own work. All content was reviewed by the group. <a href="nosotros.html#ai">Read more</a>.</p>
+<p style="font-size:0.8rem; opacity:0.7; max-width:60ch; margin-top:2rem;"><strong>AI use statement.</strong> Generative AI (Claude, Anthropic) supported the development of this website and the proofreading/translation of some texts. All 3D modeling, measurements, assemblies, technical drawings, renders and photographs are the group's own work. The Phase 3 placeholder image was generated with AI. All content was reviewed by the group.</p>
 </footer><script>
-(function(){var s=document.getElementById('cal'),NS='http://www.w3.org/2000/svg',K=8,X0=70,mm=0,max=105;
+/* ================================================================
+   LIVE TIMELINE — edit only this block when a phase changes.
+   done:true  -> phase shows as "Completed".
+   The bar fills automatically with today's date.
+   ================================================================ */
+var COURSE_START = '2026-09-14';   // first week of classes
+var PHASES = [
+  {name:'The lamp',  line:'The illusion of simplicity',  start:'2026-09-14', end:'2026-10-20', color:'#111111', ink:'#ffffff', img:'img/lamp.jpg', href:'fase1.html', label:'1 · LAMP', done:true},
+  {name:'The iron',  line:'The nightmare of complexity', start:'2026-10-20', end:'2026-11-17', color:'#E673A5', ink:'#111111', img:'img/iron.jpg', href:'fase2.html', label:'2 · IRON', done:false},
+  {name:'Free topic',line:'Something that lets us sleep at night', start:'2026-11-17', end:'2026-12-22', color:'#BDBDBD', ink:'#111111', img:'img/fase3.jpg', href:'fase3.html', label:'3 · ?', done:false}
+];
+/* ================================================================ */
+(function(){
+var s=document.getElementById('cal'),NS='http://www.w3.org/2000/svg';
+var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+function d(str){var p=str.split('-');return new Date(+p[0],p[1]-1,+p[2])}
+var DAY=864e5,S=d(COURSE_START),E=d(PHASES[PHASES.length-1].end);
+function idx(dt){return Math.round((dt-S)/DAY)}
+function dayDate(i){return new Date(S.getFullYear(),S.getMonth(),S.getDate()+i)}
+var D=idx(E),X0=80,X1=840,K=(X1-X0)/D;
+function X(i){return X0+i*K}
+var now=new Date();now=new Date(now.getFullYear(),now.getMonth(),now.getDate());
+var TODAY=Math.max(0,Math.min(D,idx(now)));
+var allDone=PHASES.every(function(p){return p.done});
+if(allDone)TODAY=D;
+PHASES.forEach(function(p){p.a=idx(d(p.start));p.b=idx(d(p.end))});
 function e(n,a,p){var x=document.createElementNS(NS,n);for(var k in a)x.setAttribute(k,a[k]);(p||s).appendChild(x);return x}
-e('rect',{x:X0-30,y:70,width:max*K+120,height:62,fill:'#ccc',stroke:'#000','stroke-width':2});
-for(var i=0;i<=max;i++){var L=i%10==0?24:i%5==0?16:9;e('line',{x1:X0+i*K,x2:X0+i*K,y1:70,y2:70+L,stroke:'#000'});if(i%10==0)e('text',{x:X0+i*K+4,y:112,'font-size':18,'font-weight':700},0).textContent=i/10}
-e('rect',{x:X0-30,y:132,width:34,height:90,fill:'#999',stroke:'#000','stroke-width':2});e('path',{d:'M'+(X0-30)+' 70V20h34',fill:'none',stroke:'#000','stroke-width':2});
-var g=e('g',{'class':'jaw',tabindex:0,role:'slider','aria-label':'Caliper jaw','aria-valuemin':0,'aria-valuemax':100,'aria-valuenow':0});
-e('rect',{x:0,y:62,width:230,height:50,fill:'#fff',stroke:'#000','stroke-width':2},g);e('rect',{x:0,y:112,width:30,height:110,fill:'#eee',stroke:'#000','stroke-width':2},g);e('path',{d:'M0 62V20h30V62',fill:'none',stroke:'#000','stroke-width':2},g);
-for(var j=0;j<=10;j++)e('line',{x1:6+j*7.4,x2:6+j*7.4,y1:62,y2:62+(j%5?8:14),stroke:'#000'},g);
-var t=e('text',{x:X0+280,y:190,'font-size':64,'font-weight':800,'class':'rd'});
-function set(v){mm=Math.max(0,Math.min(100,v));g.setAttribute('transform','translate('+(X0+mm*K)+',0)');g.setAttribute('aria-valuenow',Math.round(mm));t.textContent=mm.toFixed(1)+' mm'}
-set(0);var drag=0;g.addEventListener('pointerdown',function(ev){drag=1;g.setPointerCapture(ev.pointerId);anim=0});
-g.addEventListener('pointermove',function(ev){if(!drag)return;var r=s.getBoundingClientRect();set(((ev.clientX-r.left)/r.width*1000-X0)/K-14)});
-g.addEventListener('pointerup',function(){drag=0});g.addEventListener('keydown',function(ev){if(ev.key=='ArrowRight')set(mm+1);if(ev.key=='ArrowLeft')set(mm-1)});
-var anim=1;if(matchMedia('(prefers-reduced-motion: reduce)').matches){set(24)}else{var st=null;(function f(ts){if(!anim)return;st=st||ts;var p=Math.min(1,(ts-st)/1800);set(24*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)})(0)}
+
+/* ruler body */
+e('rect',{x:X0-46,y:60,width:X1-X0+46+130,height:72,fill:'#fff',stroke:'#000','stroke-width':2});
+/* phase bands: faint for the whole phase, solid up to today */
+var defs=e('defs',{}),cp=e('clipPath',{id:'tlFill'},defs),cr=e('rect',{x:0,y:0,width:X0,height:230},cp);
+var faint=e('g',{opacity:.28}),solid=e('g',{'clip-path':'url(#tlFill)'}),labels=e('g',{});
+PHASES.forEach(function(p,i){
+  var a={x:X(p.a),y:104,width:X(p.b)-X(p.a),height:28,fill:p.color};
+  e('rect',a,faint);e('rect',a,solid);
+  if(i)e('line',{x1:X(p.a),x2:X(p.a),y1:104,y2:132,stroke:'#000','stroke-width':2},labels);
+  e('text',{x:X(p.a)+8,y:123,'font-size':13,'font-weight':800,fill:p.ink,'letter-spacing':1},labels).textContent=p.label;
+});
+e('line',{x1:X0-46,x2:X1+130,y1:104,y2:104,stroke:'#000','stroke-width':1.5});
+/* day ticks: long on the 1st of each month, medium on Mondays */
+for(var i=0;i<=D;i++){var dt=dayDate(i),first=dt.getDate()==1,mon=dt.getDay()==1;
+  var L=first||i==0?26:mon?15:8;e('line',{x1:X(i),x2:X(i),y1:60,y2:60+L,stroke:'#000','stroke-width':first?2:1});
+  if(first||i==0)e('text',{x:X(i)+4,y:99,'font-size':15,'font-weight':800},0).textContent=MON[dt.getMonth()].toUpperCase();}
+/* "today" marker */
+/* fixed jaw */
+e('rect',{x:X0-34,y:132,width:34,height:58,fill:'#e6e6e6',stroke:'#000','stroke-width':2});
+e('path',{d:'M'+(X0-34)+' 60V18h34V60',fill:'#e6e6e6',stroke:'#000','stroke-width':2});
+/* sliding jaw (left face = selected day) */
+var g=e('g',{'class':'jaw',tabindex:0,role:'slider','aria-label':'Timeline jaw','aria-valuemin':0,'aria-valuemax':D});
+e('rect',{x:0,y:50,width:112,height:48,fill:'#fff','fill-opacity':.92,stroke:'#000','stroke-width':2},g);
+e('path',{d:'M0 50V18h30V50',fill:'#fff',stroke:'#000','stroke-width':2},g);
+e('rect',{x:0,y:132,width:30,height:58,fill:'#fff',stroke:'#000','stroke-width':2},g);
+for(var j=0;j<=10;j++)e('line',{x1:40+j*6.5,x2:40+j*6.5,y1:50,y2:50+(j%5?8:14),stroke:'#000'},g);
+var jl=e('text',{x:40,y:88,'font-size':13,'font-weight':800},g);
+/* "today" marker (drawn on top, label left of the jaw) */
+var tm=e('g',{fill:'currentColor'});e('path',{d:'M'+(X(TODAY)-6)+' 142 l6 -9 l6 9 z'},tm);
+e('text',{x:X(TODAY)-10,y:152,'font-size':12,'font-weight':800,'text-anchor':'end'},tm).textContent='TODAY';
+
+/* readout */
+var hero=document.querySelector('.hero'),$=function(id){return document.getElementById(id)},rows=document.querySelectorAll('.row[data-phase]');
+var NOWK=-1;PHASES.some(function(p,k){if(!p.done){NOWK=k;return true}});
+function status(p,i){return p.done?'Completed':(i===NOWK?'Happening now':'Coming next')}
+function phaseAt(i){for(var k=0;k<PHASES.length;k++)if(i<=PHASES[k].b||k==PHASES.length-1)return k;return 0}
+function fmt(i){var dt=dayDate(i);return dt.getDate()+' '+MON[dt.getMonth()]}
+var cur=-1,day=0;
+function set(v,fill){
+  day=Math.max(0,Math.min(D,Math.round(v)));
+  g.setAttribute('transform','translate('+X(day)+',0)');
+  g.setAttribute('aria-valuenow',day);g.setAttribute('aria-valuetext',fmt(day));
+  jl.textContent=fmt(day).toUpperCase();
+  if(fill)cr.setAttribute('width',X(day));
+  $('tlDay').textContent=fmt(day);
+  $('tlNote').innerHTML=day==TODAY?(allDone?'Course complete. Timeline closed.':'Today'):'<button type="button" id="tlBack">&larr; Back to today</button>';
+  var k=phaseAt(day);if(k!==cur){cur=k;var p=PHASES[k],c=$('tlCard');
+    c.href=p.href;c.style.setProperty('--pc',p.color);c.style.setProperty('--pi',p.ink);
+    hero.style.setProperty('--hero',p.color);hero.style.setProperty('--hero-ink',p.ink);
+    $('tlTag').textContent='Phase '+(k+1)+' · '+status(p,k)+' · due '+fmt(p.b);
+    $('tlTitle').textContent=p.name;$('tlLine').textContent=p.line;
+    $('tlMedia').innerHTML=p.img?'<img src="'+p.img+'" alt="'+p.name+'">':'<span class="tl-ph" aria-hidden="true">?</span>';
+    rows.forEach(function(r){r.querySelector('.n').style.color=+r.dataset.phase===k?(PHASES[k].color=='#BDBDBD'?'#777':PHASES[k].color):''});}
+}
+/* keep the phase rows in sync with the config */
+rows.forEach(function(r){var k=+r.dataset.phase,p=PHASES[k];if(!p)return;
+  r.querySelector('.st').innerHTML='<b>'+fmt(p.b)+'</b>Phase '+(k+1)+' &middot; '+status(p,k).toLowerCase();});
+document.addEventListener('click',function(ev){if(ev.target&&ev.target.id=='tlBack')set(TODAY)});
+
+/* interaction */
+var drag=0,off=0,anim=1;
+function vx(ev){var r=s.getBoundingClientRect();return (ev.clientX-r.left)/r.width*1000}
+function stopIntro(){if(anim){anim=0;cr.setAttribute('width',X(TODAY))}}
+s.addEventListener('pointerdown',function(ev){stopIntro();drag=1;var x=vx(ev);off=g.contains(ev.target)?x-X(day):0;s.setPointerCapture(ev.pointerId);set((x-off-X0)/K)});
+s.addEventListener('pointermove',function(ev){if(drag)set((vx(ev)-off-X0)/K)});
+s.addEventListener('pointerup',function(){drag=0});s.addEventListener('pointercancel',function(){drag=0});
+g.addEventListener('keydown',function(ev){var st=ev.shiftKey?7:1;
+  if(ev.key=='ArrowRight'||ev.key=='ArrowUp'){stopIntro();set(day+st);ev.preventDefault()}
+  if(ev.key=='ArrowLeft'||ev.key=='ArrowDown'){stopIntro();set(day-st);ev.preventDefault()}
+  if(ev.key=='Home'){stopIntro();set(0)}if(ev.key=='End'){stopIntro();set(D)}});
+
+/* intro: the jaw opens from the first day of class to today, filling the bar */
+if(matchMedia('(prefers-reduced-motion: reduce)').matches){anim=0;set(TODAY,true)}
+else{set(0,true);var st0=null;requestAnimationFrame(function f(ts){if(!anim)return;st0=st0||ts;var p=Math.min(1,(ts-st0)/2200);
+  set(TODAY*(1-Math.pow(1-p,3)),true);if(p<1)requestAnimationFrame(f);else anim=0})}
 })();</script></body></html>
