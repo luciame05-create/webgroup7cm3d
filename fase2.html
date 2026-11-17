@@ -63,14 +63,33 @@
 .p2-team figcaption{color:#000;margin:0;padding:.7rem .9rem;border-top:2px solid #000;font-size:.85rem}
 .p2-team .arrow{font-size:2.4rem;font-weight:800}
 /* grid children may shrink below their image's natural width */
-.p2-bat>*,.p2-card .im>*,.p2-steps>*,.p2-photos>*,.p2-renders>*,.p2-team>*,.p2-ba>*,.p2-vs>*,.p2-asm>*,.p2-tree>*,.p2-g2>*,.p2-grid>*{min-width:0}
+.p2-asmg>*,.p2-asmrow>*,.p2-wip>*,.p2-bat>*,.p2-card .im>*,.p2-steps>*,.p2-photos>*,.p2-renders>*,.p2-team>*,.p2-ba>*,.p2-vs>*,.p2-asm>*,.p2-tree>*,.p2-g2>*,.p2-grid>*{min-width:0}
 .p2-card .im img,.p2-photos img,.p2-team img,.p2-ba img{width:100%;display:block}
 .slot{background:#fff;border:2px solid #000}
 .slot img{width:100%;display:block}
 .slot figcaption{color:#000;margin:0;padding:.7rem 1rem;border-top:2px solid #000;font-size:.85rem}
 .slot.empty img{display:none}
 .slot.empty::before{content:attr(data-empty);display:flex;align-items:center;justify-content:center;text-align:center;aspect-ratio:16/10;padding:2rem;border-bottom:2px dashed var(--mid);background:repeating-linear-gradient(45deg,#f4f4f4 0 12px,#ececec 12px 24px);color:var(--mid);font-weight:700;text-transform:uppercase;font-size:.85rem;letter-spacing:.05em}
-.p2-asmshot{max-width:900px;margin:1rem 0 0}
+.p2-asmg{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:auto auto;gap:1rem;margin:2rem 0}
+.p2-asmg figure{background:#fff;border:2px solid #000;margin:0;display:flex;flex-direction:column}
+.p2-asmg img{width:100%;flex:1;min-height:0;object-fit:contain;background:#f2f2f2}
+.p2-asmg figcaption{color:#000;margin:0;padding:.7rem 1rem;border-top:2px solid #000;font-size:.85rem}
+.p2-asmg .a1{grid-row:span 2}
+.p2-asmg .a1 img{object-fit:cover}
+.p2-asmrow{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:2rem}
+.p2-honest{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid #000;margin:2rem 0}
+.p2-honest div{padding:1.4rem 1.4rem 1.4rem 0}.p2-honest div+div{padding-left:1.4rem;border-left:1px solid #0003}
+.p2-honest b{display:block;text-transform:uppercase;font-size:1.05rem;margin-bottom:.3rem}
+.p2-honest p{margin:0;font-size:.92rem}
+.p2-verdict{background:var(--pink);padding:2rem;margin:2rem 0}
+.p2-verdict h3{font-size:clamp(1.5rem,3vw,2.2rem)}.p2-verdict p{margin:0}
+.p2-wip{display:grid;grid-template-columns:1fr 2fr;gap:2rem;align-items:center}
+.p2-wip video{width:100%;display:block;aspect-ratio:804/580;object-fit:cover;background:#eee;border:2px solid #000}
+.p2-spin{background:#111;border:2px solid #000;margin:2rem 0 1rem}
+.p2-spin video{width:100%;display:block;aspect-ratio:16/9;object-fit:contain;background:#111}
+.p2-spin figcaption{color:#fff;margin:0;padding:.7rem 1rem;font-size:.85rem}
+.p2-spin.empty video{display:none}
+.p2-spin.empty::before{content:"360° render coming soon";display:flex;align-items:center;justify-content:center;aspect-ratio:16/9;color:#888;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:repeating-linear-gradient(45deg,#1a1a1a 0 14px,#222 14px 28px)}
 .p2-renders{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1rem 0 2.5rem}
 .p2-renders .rbig{grid-column:span 2;grid-row:span 2}
 .p2-renders .slot img{aspect-ratio:16/9;object-fit:cover;background:#5a5a5a}
@@ -90,9 +109,10 @@
 .p2-end p{margin:0 auto 1.5rem}
 .p2-next{display:inline-block;margin-top:.5rem;font-weight:800;text-decoration:none;border-bottom:2px solid currentColor}
 @media(max-width:1000px){.p2-bat{grid-template-columns:1fr 1fr}.p2-steps{grid-template-columns:1fr 1fr}.p2-steps li:nth-child(2){border-right:0}.p2-steps li:nth-child(-n+2){border-bottom:2px solid #000}}
-@media(max-width:800px){.p2-grid,.p2-g2,.p2-tree,.p2-asm{grid-template-columns:1fr}.p2-facts{grid-template-columns:1fr 1fr}.p2-obj{max-width:360px;margin:0 auto;width:100%}.p2-vs,.p2-ba,.p2-team{grid-template-columns:1fr}.p2-vs .arrow,.p2-ba .arrow,.p2-team .arrow{transform:rotate(90deg);justify-self:center}.p2-photos{grid-template-columns:1fr 1fr}.p2-renders{grid-template-columns:1fr}.p2-renders .rbig{grid-column:auto;grid-row:auto}}
+@media(max-width:800px){.p2-asmg,.p2-asmrow,.p2-honest,.p2-wip{grid-template-columns:1fr}.p2-asmg .a1{grid-row:auto}.p2-honest div+div{padding-left:0;border-left:0;border-top:1px solid #0003}
+.p2-grid,.p2-g2,.p2-tree,.p2-asm{grid-template-columns:1fr}.p2-facts{grid-template-columns:1fr 1fr}.p2-obj{max-width:360px;margin:0 auto;width:100%}.p2-vs,.p2-ba,.p2-team{grid-template-columns:1fr}.p2-vs .arrow,.p2-ba .arrow,.p2-team .arrow{transform:rotate(90deg);justify-self:center}.p2-photos{grid-template-columns:1fr 1fr}.p2-renders{grid-template-columns:1fr}.p2-renders .rbig{grid-column:auto;grid-row:auto}}
 @media(max-width:560px){.p2-bat,.p2-steps{grid-template-columns:1fr}.p2-steps li{border-right:0!important;border-bottom:2px solid #000}.p2-steps li:last-child{border-bottom:0}}
-</style></head><body><header class="nav"><a href="index.html">Group 7 &middot; CM3D</a><nav aria-label="Main"><ul><li><a href="index.html">Home</a></li><li class="dd"><a href="fase1.html">Phase 1 &#9662;</a><ul><li><a href="fase1.html#s01">01 &nbsp;The object</a></li><li><a href="fase1.html#s02">02 &nbsp;Disassembly</a></li><li><a href="fase1.html#s03">03 &nbsp;Measuring</a></li><li><a href="fase1.html#s04">04 &nbsp;Modeling</a></li><li><a href="fase1.html#s05">05 &nbsp;Assembly & drawings</a></li><li><a href="fase1.html#s06">06 &nbsp;Challenges</a></li></ul></li><li class="dd"><a href="fase2.html" class="on">Phase 2 &#9662;</a><ul><li><a href="fase2.html#s01">01 &nbsp;The object</a></li><li><a href="fase2.html#s02">02 &nbsp;Disassembly</a></li><li><a href="fase2.html#s03">03 &nbsp;Surfaces</a></li><li><a href="fase2.html#s04">04 &nbsp;Everyone&rsquo;s battle</a></li><li><a href="fase2.html#s05">05 &nbsp;The turning point</a></li><li><a href="fase2.html#s06">06 &nbsp;Teamwork</a></li><li><a href="fase2.html#s07">07 &nbsp;Assembly &amp; render</a></li><li><a href="fase2.html#s08">08 &nbsp;What we learned</a></li></ul></li><li><a href="fase3.html">Phase 3</a></li><li><a href="nosotros.html">About us</a></li></ul></nav></header><main>
+</style></head><body><header class="nav"><a href="index.html">Group 7 &middot; CM3D</a><nav aria-label="Main"><ul><li><a href="index.html">Home</a></li><li class="dd"><a href="fase1.html">Phase 1 &#9662;</a><ul><li><a href="fase1.html#s01">01 &nbsp;The object</a></li><li><a href="fase1.html#s02">02 &nbsp;Disassembly</a></li><li><a href="fase1.html#s03">03 &nbsp;Measuring</a></li><li><a href="fase1.html#s04">04 &nbsp;Modeling</a></li><li><a href="fase1.html#s05">05 &nbsp;Assembly & drawings</a></li><li><a href="fase1.html#s06">06 &nbsp;Challenges</a></li></ul></li><li class="dd"><a href="fase2.html" class="on">Phase 2 &#9662;</a><ul><li><a href="fase2.html#s01">01 &nbsp;The object</a></li><li><a href="fase2.html#s02">02 &nbsp;Disassembly</a></li><li><a href="fase2.html#s03">03 &nbsp;Surfaces</a></li><li><a href="fase2.html#s04">04 &nbsp;Everyone&rsquo;s battle</a></li><li><a href="fase2.html#s05">05 &nbsp;The turning point</a></li><li><a href="fase2.html#s06">06 &nbsp;Teamwork</a></li><li><a href="fase2.html#s07">07 &nbsp;Assembly</a></li><li><a href="fase2.html#s08">08 &nbsp;Renders</a></li><li><a href="fase2.html#s09">09 &nbsp;What we learned</a></li></ul></li><li><a href="fase3.html">Phase 3</a></li><li><a href="nosotros.html">About us</a></li></ul></nav></header><main>
 
 <section class="p2-hero"><div class="wrap p2-grid"><div>
 <p class="p2-kick">Phase 2 [M2] &middot; Consolidation &middot; Surfaces &middot; Delivered 17 Nov</p>
@@ -163,26 +183,43 @@
 <p>It might not be the textbook strategy, but with little time left it was the one that finally made the profiles match. And it taught us something we will use from now on: start from one master model, then cut the parts out of it.</p>
 </div></section>
 
-<section id="s07" class="grey"><div class="wrap"><div class="big"><span>07</span><h2>Assembly &amp; render</h2></div>
-<p>Between millimetre tolerance adjustments, crossed diameters and parts that refused to align, we got to the assembly. We decided early on not to hide the problems: in the render, the parts that fit stay in place, and the ones that don&rsquo;t fit float around. Embracing our flaws.</p>
-<div class="p2-asm">
-<figure class="slot" data-empty="Render coming soon"><img src="img/img/f2_render8.jpg" alt="The complete set: the iron and its base." loading="lazy" onerror="this.parentNode.classList.add('empty')"><figcaption>The complete set: the iron and its base.</figcaption></figure>
-<figure><video controls muted loop playsinline preload="metadata" poster="img/img/f2_video_poster.jpg"><source src="img/img/f2_video.mp4" type="video/mp4"></video><figcaption>Work in progress: the assembly taking shape.</figcaption></figure>
+<section id="s07" class="grey"><div class="wrap"><div class="big"><span>07</span><h2>Assembly</h2></div>
+<p>The moment of truth: dozens of parts, modeled by four people, had to meet in one assembly. A shell wrapped around a frame, a transparent tank sliding into its base, a handle on two pivots, a cable and a plug, and many internal details nobody sees from outside.</p>
+<div class="p2-asmg">
+<figure class="a1"><img src="img/img/f2_asm1.jpg" alt="The assembly with the water tank pulled out of the base" loading="lazy"><figcaption>The water tank slides out of the base, as in the real product.</figcaption></figure>
+<figure><img src="img/img/f2_asm2.jpg" alt="The full assembly: base, iron, cable and plug" loading="lazy"><figcaption>The complete set, cable and plug included.</figcaption></figure>
+<figure><img src="img/img/f2_asm3.jpg" alt="Iron and base seen from behind" loading="lazy"><figcaption>Iron and base, from behind.</figcaption></figure>
 </div>
-<h3>The renders</h3>
+<div class="p2-asmrow">
+<figure><img src="img/img/f2_asm4.jpg" alt="Close-up of the tank fitting into the base under the handle" loading="lazy" style="width:100%;border:2px solid #000"><figcaption>Close-up: the tank fitting into the base, under the handle pivot.</figcaption></figure>
+<div><h3>Not perfect. Honest.</h3><p>Our assembly is not flawless, and we are not going to pretend it is. With this many parts, this many internal details and such tight fits between curved surfaces, some errors were inevitable: a few parts overlap slightly, and some had to be forced into place to close the assembly.</p><p>We decided to show it as it is. It is the honest result of our first time with surfaces, and every one of those errors taught us something.</p></div>
+</div>
+<div class="p2-honest">
+<div><b>Many parts</b><p>Shells, frame, tank, base, handle, buttons, cable, plug and interior pieces, all from four different people.</p></div>
+<div><b>Tight fits</b><p>Curved surfaces meeting curved surfaces, where a fraction of a millimetre is the difference between fitting and clashing.</p></div>
+<div><b>Inner details</b><p>Ribs, clips and channels inside the tank and the base that had to line up with parts modeled by someone else.</p></div>
+</div>
+<div class="p2-verdict"><h3>The result</h3><p>Even with its errors and forced fits, the assembly works as a whole: the iron, its base, the removable tank, the handle and the cable come together into a product that reads exactly like the real one. For our first time with surfaces and an object this complex, we are very proud of it.</p></div>
+<div class="p2-wip"><div><h3>Work in progress</h3><p>The assembly taking shape in SolidWorks, part by part.</p></div><figure><video autoplay muted loop playsinline preload="metadata" poster="img/img/f2_video_crop_poster.jpg"><source src="img/img/f2_video_crop.mp4" type="video/mp4"></video></figure></div>
+</div></section>
+
+<section id="s08"><div class="wrap"><div class="big"><span>08</span><h2>Renders</h2></div>
+<p>Once the assembly was closed, João took it into rendering: materials, light and camera, to show the iron the way a product photo would. Pink and white, like the real one.</p>
+<figure class="p2-spin" id="spin"><video autoplay muted loop playsinline preload="auto" poster="img/img/f2_render7.jpg"><source src="img/img/f2_render360.mp4" type="video/mp4" onerror="document.getElementById('spin').classList.add('empty')"></video><figcaption>360&deg; render of the iron and its base.</figcaption></figure>
 <div class="p2-renders">
 <figure class="slot rbig" data-empty="Render coming soon"><img src="img/img/f2_render7.jpg" alt="The iron in front of its base." loading="lazy" onerror="this.parentNode.classList.add('empty')"><figcaption>The iron in front of its base.</figcaption></figure>
 <figure class="slot" data-empty="Render coming soon"><img src="img/img/f2_render2.jpg" alt="Side view, handle raised." loading="lazy" onerror="this.parentNode.classList.add('empty')"><figcaption>Side view, handle raised.</figcaption></figure>
 <figure class="slot" data-empty="Render coming soon"><img src="img/img/f2_render3.jpg" alt="Three-quarter view." loading="lazy" onerror="this.parentNode.classList.add('empty')"><figcaption>Three-quarter view.</figcaption></figure>
-<figure class="slot" data-empty="Render coming soon"><img src="img/img/f2_render4.jpg" alt="Front view." loading="lazy" onerror="this.parentNode.classList.add('empty')"><figcaption>Front view.</figcaption></figure>
+<figure class="slot" data-empty="Render coming soon"><img src="img/img/f2_render8.jpg" alt="The complete set: the iron and its base." loading="lazy" onerror="this.parentNode.classList.add('empty')"><figcaption>The complete set: the iron and its base.</figcaption></figure>
 <figure class="slot" data-empty="Render coming soon"><img src="img/img/f2_render5.jpg" alt="Detail: the handle pivot." loading="lazy" onerror="this.parentNode.classList.add('empty')"><figcaption>Detail: the handle pivot.</figcaption></figure>
+<figure class="slot" data-empty="Render coming soon"><img src="img/img/f2_render4.jpg" alt="Front view." loading="lazy" onerror="this.parentNode.classList.add('empty')"><figcaption>Front view.</figcaption></figure>
 <figure class="slot" data-empty="Render coming soon"><img src="img/img/f2_render1.jpg" alt="The base unit with the handle and the transparent tank." loading="lazy" onerror="this.parentNode.classList.add('empty')"><figcaption>The base unit with the handle and the transparent tank.</figcaption></figure>
+<figure class="slot" data-empty="More renders coming soon"><img src="img/img/f2_render9.jpg" alt="Render." loading="lazy" onerror="this.parentNode.classList.add('empty')"><figcaption>Render.</figcaption></figure>
+<figure class="slot" data-empty="More renders coming soon"><img src="img/img/f2_render10.jpg" alt="Render." loading="lazy" onerror="this.parentNode.classList.add('empty')"><figcaption>Render.</figcaption></figure>
 </div>
-<h3>The assembly in SolidWorks</h3>
-<div class="p2-asmshot"><figure class="slot" data-empty="Final assembly coming soon"><img src="img/img/f2_assembly.jpg" alt="The final assembly in SolidWorks." loading="lazy" onerror="this.parentNode.classList.add('empty')"><figcaption>The final assembly in SolidWorks.</figcaption></figure></div>
 </div></section>
 
-<section id="s08"><div class="wrap"><div class="big"><span>08</span><h2>What we learned</h2></div>
+<section id="s09" class="grey"><div class="wrap"><div class="big"><span>09</span><h2>What we learned</h2></div>
 <p>Our final model is not industrial perfection. But if we started this project tomorrow, with what we know now, we would do everything differently.</p>
 <ol class="p2-learn">
 <li><div><b>Plan the whole shape first</b>Before modeling any part, decide how the full object is built: its planes, its main curves, its master solid.</div></li>
