@@ -15,11 +15,11 @@
 .p1-g3 h3{margin:.8rem 0 .6rem}
 .p1-quote{font-size:clamp(1.6rem,3.4vw,2.8rem);font-style:italic;line-height:1.15;letter-spacing:-.02em;max-width:22ch;margin:0 0 1.5rem}
 .p1-why{border-left:6px solid #000;padding-left:1.5rem}
-.p1-team{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:2rem 0}
+.p1-team{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin:2rem 0}
 .p1-team figure{background:#fff;border:2px solid #000}
-.p1-team img{width:100%;aspect-ratio:16/9;object-fit:contain;background:#ccc}.p1-team img.dk{background:#808080}
+.p1-team img{width:100%;aspect-ratio:9/14;object-fit:cover;background:#ccc}
 .p1-team figcaption{color:#000;font-size:.95rem;margin:0;padding:1rem 1.2rem 1.2rem}
-.p1-team figcaption b{display:block;font-size:1.3rem;text-transform:uppercase;letter-spacing:-.02em}
+.p1-team figcaption b{display:block;font-size:1.15rem;text-transform:uppercase;letter-spacing:-.02em;margin-bottom:.2rem}
 .p1-team figcaption span{display:block;color:var(--mid);font-size:.85rem;margin-top:.3rem}
 .p1-views{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0}
 .p1-views img{aspect-ratio:775/1000;object-fit:cover;background:#eee}
@@ -55,7 +55,8 @@
 .p1-end h2{font-size:clamp(4rem,14vw,12rem);margin:0 0 2rem}
 .p1-end p{margin:0 auto 2rem}
 .p1-next{display:inline-block;margin-top:.5rem;font-weight:800;text-decoration:none;border-bottom:2px solid currentColor}
-@media(max-width:800px){.p1-grid,.p1-g3,.p1-team,.p1-steps{grid-template-columns:1fr}.p1-steps li{border-right:0;border-bottom:2px solid #000}.p1-steps li:last-child{border-bottom:0}.p1-facts{grid-template-columns:1fr 1fr}.p1-obj{max-width:360px;margin:0 auto;width:100%}.p1-views{grid-template-columns:1fr 1fr}}
+@media(max-width:1000px){.p1-team{grid-template-columns:1fr 1fr}}
+@media(max-width:800px){.p1-grid,.p1-g3,.p1-steps{grid-template-columns:1fr}.p1-steps li{border-right:0;border-bottom:2px solid #000}.p1-steps li:last-child{border-bottom:0}.p1-facts{grid-template-columns:1fr 1fr}.p1-obj{max-width:360px;margin:0 auto;width:100%}.p1-views{grid-template-columns:1fr 1fr}}
 </style></head><body><header class="nav"><a href="index.html">Group 7 &middot; CM3D</a><nav aria-label="Main"><ul><li><a href="index.html">Home</a></li><li class="dd"><a href="fase1.html" class="on">Phase 1 &#9662;</a><ul><li><a href="fase1.html#s01">01 &nbsp;The object</a></li><li><a href="fase1.html#s02">02 &nbsp;Disassembly</a></li><li><a href="fase1.html#s03">03 &nbsp;Measuring</a></li><li><a href="fase1.html#s04">04 &nbsp;Modeling</a></li><li><a href="fase1.html#s05">05 &nbsp;Assembly & drawings</a></li><li><a href="fase1.html#s06">06 &nbsp;Challenges</a></li></ul></li><li><a href="fase2.html">Phase 2</a></li><li><a href="fase3.html">Phase 3</a></li><li><a href="nosotros.html">About us</a></li></ul></nav></header><main>
 
 <section class="p1-hero"><div class="wrap p1-grid"><div>
@@ -84,12 +85,11 @@
 <h3 style="margin-top:3rem">Who modeled what</h3>
 <p>We split the parts by experience. Inês and João had used SolidWorks in their design degree, so they took the most complex areas. Lucía and Martín came from Inventor, so they started with the arms and connecting parts, and learned the software on the way.</p>
 <div class="p1-team">
-<figure><img src="img/f1_team_ines.jpg" alt="Inês's parts: head shell, frame, LED board, reflector and cover" loading="lazy"><figcaption><b>Inês &middot; The head</b>The light part: shell, frame, LED board, reflector and transparent cover.<span>Most complex area. Previous SolidWorks experience.</span></figcaption></figure>
-<figure><img class="dk" src="img/f1_team_joao.jpg" alt="João's parts: base shells, frame and switch" loading="lazy"><figcaption><b>João &middot; The base</b>Base shells, frame, switch and the connections to the plug.<span>Most complex area. Previous SolidWorks experience.</span></figcaption></figure>
-<figure><img src="img/f1_team_lucia.jpg" alt="Lucía's parts: the articulated arms, washer and knobs" loading="lazy"><figcaption><b>Lucía &middot; The arms</b>The articulated arms, plus a washer and the knob screws.<span>Came from Inventor. Learned SolidWorks on these parts.</span></figcaption></figure>
-<figure><img class="dk" src="img/f1_team_martin.jpg" alt="Martín's parts: connecting pieces, washers, screws and cable" loading="lazy"><figcaption><b>Martín &middot; The connections</b>The pieces that join head and arms, washers, screws and the power cable.<span>Came from Inventor. Learned SolidWorks on these parts.</span></figcaption></figure>
-</div>
-<div class="gal"><figure><img src="img/head.jpg" alt="The head" loading="lazy"><figcaption>Head parts.</figcaption></figure><figure><img src="img/base.jpg" alt="The base" loading="lazy"><figcaption>Base parts.</figcaption></figure><figure><img src="img/arms.jpg" alt="The arms" loading="lazy"><figcaption>Arm parts.</figcaption></figure><figure><img src="img/joints.jpg" alt="Joints and cable" loading="lazy"><figcaption>Fitting parts and cable.</figcaption></figure></div></div></section>
+<figure><img src="img/head.jpg" alt="Inês's parts: head shell, frame, LED board, reflector and cover" loading="lazy"><figcaption><b>Inês &middot; The head</b>The light part: shell, frame, LED board, reflector and transparent cover.<span>Most complex area. Previous SolidWorks experience.</span></figcaption></figure>
+<figure><img src="img/base.jpg" alt="João's parts: base shells, frame and switch" loading="lazy"><figcaption><b>João &middot; The base</b>Base shells, frame, switch and the connections to the plug.<span>Most complex area. Previous SolidWorks experience.</span></figcaption></figure>
+<figure><img src="img/arms.jpg" alt="Lucía's parts: the articulated arms, washer and knobs" loading="lazy"><figcaption><b>Lucía &middot; The arms</b>The articulated arms, plus a washer and the knob screws.<span>Came from Inventor. Learned SolidWorks on these parts.</span></figcaption></figure>
+<figure><img src="img/joints.jpg" alt="Martín's parts: connecting pieces, washers, screws and cable" loading="lazy"><figcaption><b>Martín &middot; The connections</b>The pieces that join head and arms, washers, screws and the power cable.<span>Came from Inventor. Learned SolidWorks on these parts.</span></figcaption></figure>
+</div></div></section>
 
 <section id="s03" class="dark"><div class="wrap cols"><div><div class="big"><span>03</span><h2>Measuring</h2></div><p>Everything was measured by hand with a caliper, because the details decide whether the 3D assembly fits. Ribs, screw posts, hinge ends: none of them are visible from outside.</p><p>This is where the group&rsquo;s big conclusion came from: the difficulty was never the shell. If those tiny fittings were not modeled with rigour in every part, the final assembly would be a disaster.</p></div><figure><img src="img/caliper.jpg" alt="Caliper reading, again." loading="lazy"><figcaption>Measuring with a caliper.</figcaption></figure></div>
 <div class="wrap"><figure style="margin-top:2rem"><img src="img/f1_details.jpg" alt="Close-ups of the small internal details: ribs, screw posts, hinge ends, LEDs and the reflector" loading="lazy"><figcaption>Too many tiny details. Every one of them had to be measured.</figcaption></figure>
