@@ -1,244 +1,156 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Phase 2 | Group 7 | CM3D</title><link rel="stylesheet" href="style.css">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Phase 1 | Group 7 | CM3D</title><link rel="stylesheet" href="style.css">
 <style>
-/* ===== Phase 2 identity: pink, like the iron ===== */
-:root{--pink:#E673A5;--teal:#72BFCB}
-.p2-hero{background:var(--pink);color:#111;padding:4rem 0 3rem}
-.p2-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:3rem;align-items:center}
-.p2-kick{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;opacity:.75;margin-bottom:1rem}
-.p2-hero h1{font-size:clamp(3rem,9vw,8rem)}
-.p2-hero .sub{margin:.5rem 0 1.5rem}
-.p2-obj{background:radial-gradient(circle at 50% 55%,#fff 0,#f6c9dc 45%,var(--pink) 70%);border-radius:50%;aspect-ratio:1;display:flex;align-items:center;justify-content:center}
-.p2-obj img{width:78%;max-height:85%;object-fit:contain;filter:drop-shadow(0 18px 22px #0004)}
-.p2-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:3rem;padding-top:1.5rem;background:linear-gradient(#111,#111) content-box top/100% 2px no-repeat}
-.p2-facts div{font-size:.9rem}.p2-facts b{display:block;font-size:clamp(2.2rem,5vw,4rem);font-weight:800;line-height:1;margin-bottom:.3rem}
-.p2-g2{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
-.p2-g2 span{display:block;font-size:3.5rem;font-weight:800;line-height:1;color:var(--pink)}
-.p2-g2 h3{margin:.8rem 0 .6rem;font-size:clamp(1.6rem,3vw,2.4rem)}
-.p2-vs{display:grid;grid-template-columns:1fr auto 1fr;gap:1.5rem;align-items:stretch;margin:2.5rem 0}
-.p2-vs figure{padding:2rem;display:flex;flex-direction:column;justify-content:space-between}
-.p2-vs figure img{width:100%;height:280px;object-fit:contain}
-.p2-vs figcaption{margin-top:1.2rem;color:inherit;font-size:1rem}
-.p2-vs figcaption b{display:block;font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;opacity:.7}
-.p2-vs .l{background:#111;color:#fff}.p2-vs .i{background:var(--pink);color:#111}
-.p2-vs .arrow{align-self:center;font-size:3rem;font-weight:800}
-.p2-quote{font-size:clamp(1.8rem,4.2vw,3.4rem);font-style:italic;line-height:1.1;letter-spacing:-.02em;max-width:24ch;margin:0 0 1rem}
-.p2-mistake{background:#111;color:#fff;padding:2rem;margin:2.5rem 0}
-.p2-mistake h3{font-size:clamp(1.5rem,3vw,2.2rem);color:var(--pink)}.p2-mistake p{margin:0}
-.p2-photos{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin:2rem 0}
-.p2-photos img{aspect-ratio:9/14;object-fit:cover}
-.p2-ba{display:grid;grid-template-columns:1fr auto 1fr;gap:1.5rem;align-items:center;margin:2.5rem 0}
-.p2-ba figure{background:#fff;border:2px solid #000}
-.p2-ba img{aspect-ratio:4/3;object-fit:contain;background:#c8ccd4}
-.p2-ba figcaption{color:#000;font-weight:700;text-transform:uppercase;font-size:.85rem;letter-spacing:.04em;margin:0;padding:.8rem 1rem;border-top:2px solid #000}
-.p2-ba .arrow{font-size:3rem;font-weight:800}
-.p2-tree{display:grid;grid-template-columns:1fr 1.3fr;gap:3rem;align-items:center;margin-top:3rem}
-.p2-tree figure img{max-height:620px;width:auto;max-width:100%;margin:0 auto;border:2px solid #000}
-.p2-bat{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:2rem}
-.p2-card{background:#fff;border:2px solid #000;display:flex;flex-direction:column}
-.p2-card .im{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:#000;border-bottom:2px solid #000}
-.p2-card .im.one{grid-template-columns:1fr}
-.p2-card .im img{aspect-ratio:1;object-fit:cover;background:#c8ccd4}
-.p2-card div.t{padding:1.2rem 1.2rem 1.4rem}
-.p2-card h3{font-size:1.35rem;margin-bottom:.3rem}
-.p2-card .role{display:inline-block;background:var(--pink);font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:.2rem .55rem;margin-bottom:.8rem}
-.p2-card p{font-size:.92rem;margin:0 0 .8rem}
-.p2-card .q{border-top:1px solid #0003;padding-top:.8rem;margin:0;font-style:italic}
-.p2-steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);margin:2.5rem 0;border:2px solid #000;background:#fff;counter-reset:st}
-.p2-steps li{counter-increment:st;border-right:2px solid #000;display:flex;flex-direction:column}.p2-steps li:last-child{border-right:0}
-.p2-steps .ic{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;background:#eee;border-bottom:2px solid #000;font-size:4rem;font-weight:800;color:#bbb;overflow:hidden}
-.p2-steps .ic img{width:100%;height:100%;object-fit:cover}
-.p2-steps .tx{padding:1.2rem}
-.p2-steps .tx::before{content:"Stage " counter(st);display:block;font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;font-weight:700;margin-bottom:.3rem}
-.p2-steps b{display:block;text-transform:uppercase;font-size:1.1rem;margin-bottom:.3rem}
-.p2-steps .res{display:table;margin-top:.8rem;font-weight:800;font-size:.8rem;padding:.15rem .5rem;border:2px solid #000}
-.p2-steps .ok{background:var(--pink)}
-.p2-steps .no .res{text-decoration:line-through}
-.p2-steps li.win{background:#fff4f9}
-.p2-recipe{background:#111;color:#fff;padding:2rem;margin-top:1rem}
-.p2-recipe h3{color:var(--pink)}
-.p2-recipe ol{margin:1rem 0 0 1.2rem}.p2-recipe li{padding:.3rem 0}
-.p2-team{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:1rem;align-items:center;margin:2.5rem 0}
-.p2-team figure{background:#fff;border:2px solid #000}
-.p2-team img{aspect-ratio:1200/779;object-fit:cover;background:#c8ccd4}
-.p2-team figcaption{color:#000;margin:0;padding:.7rem .9rem;border-top:2px solid #000;font-size:.85rem}
-.p2-team .arrow{font-size:2.4rem;font-weight:800}
-/* grid children may shrink below their image's natural width */
-.p2-asmg>*,.p2-asmrow>*,.p2-wip>*,.p2-bat>*,.p2-card .im>*,.p2-steps>*,.p2-photos>*,.p2-renders>*,.p2-team>*,.p2-ba>*,.p2-vs>*,.p2-asm>*,.p2-tree>*,.p2-g2>*,.p2-grid>*{min-width:0}
-.p2-card .im img,.p2-photos img,.p2-team img,.p2-ba img{width:100%;display:block}
-.slot{background:#fff;border:2px solid #000}
-.slot img{width:100%;display:block}
-.slot figcaption{color:#000;margin:0;padding:.7rem 1rem;border-top:2px solid #000;font-size:.85rem}
-.slot.empty img{display:none}
-.slot.empty::before{content:attr(data-empty);display:flex;align-items:center;justify-content:center;text-align:center;aspect-ratio:16/10;padding:2rem;border-bottom:2px dashed var(--mid);background:repeating-linear-gradient(45deg,#f4f4f4 0 12px,#ececec 12px 24px);color:var(--mid);font-weight:700;text-transform:uppercase;font-size:.85rem;letter-spacing:.05em}
-.p2-asmg{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:auto auto;gap:1rem;margin:2rem 0}
-.p2-asmg figure{background:#fff;border:2px solid #000;margin:0;display:flex;flex-direction:column}
-.p2-asmg img{width:100%;flex:1;min-height:0;object-fit:contain;background:#f2f2f2}
-.p2-asmg figcaption{color:#000;margin:0;padding:.7rem 1rem;border-top:2px solid #000;font-size:.85rem}
-.p2-asmg .a1{grid-row:span 2}
-.p2-asmg .a1 img{object-fit:cover}
-.p2-asmrow{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:2rem}
-.p2-honest{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid #000;margin:2rem 0}
-.p2-honest div{padding:1.4rem 1.4rem 1.4rem 0}.p2-honest div+div{padding-left:1.4rem;border-left:1px solid #0003}
-.p2-honest b{display:block;text-transform:uppercase;font-size:1.05rem;margin-bottom:.3rem}
-.p2-honest p{margin:0;font-size:.92rem}
-.p2-verdict{background:var(--pink);padding:2rem;margin:2rem 0}
-.p2-verdict h3{font-size:clamp(1.5rem,3vw,2.2rem)}.p2-verdict p{margin:0}
-.p2-wip{display:grid;grid-template-columns:1fr 2fr;gap:2rem;align-items:center}
-.p2-wip video{width:100%;display:block;aspect-ratio:804/580;object-fit:cover;background:#eee;border:2px solid #000}
-.p2-spin{background:#111;border:2px solid #000;margin:2rem 0 1rem}
-.p2-spin video{width:100%;display:block;aspect-ratio:16/9;object-fit:contain;background:#111}
-.p2-spin figcaption{color:#fff;margin:0;padding:.7rem 1rem;font-size:.85rem}
-.p2-spin.empty video{display:none}
-.p2-spin.empty::before{content:"360° render coming soon";display:flex;align-items:center;justify-content:center;aspect-ratio:16/9;color:#888;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:repeating-linear-gradient(45deg,#1a1a1a 0 14px,#222 14px 28px)}
-.p2-renders{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1rem 0 2.5rem}
-.p2-renders .rbig{grid-column:span 2;grid-row:span 2}
-.p2-renders .slot img{aspect-ratio:16/9;object-fit:cover;background:#5a5a5a}
-.p2-renders .slot.empty::before{aspect-ratio:16/9;padding:0}
-@media(min-width:801px){.p2-renders .rbig{position:relative}
-.p2-renders .rbig img{position:absolute;top:0;left:0;width:100%;height:calc(100% - 2.9rem);aspect-ratio:auto;object-fit:cover}
-.p2-renders .rbig figcaption{position:absolute;left:0;right:0;bottom:0;height:2.9rem;box-sizing:border-box}}
-.p2-asm{display:grid;grid-template-columns:2fr 1fr;gap:1.5rem;align-items:start;margin:2rem 0}
-.p2-asm video{width:100%;max-height:560px;object-fit:contain;background:#000}
-.p2-learn{list-style:none;counter-reset:ln;margin:2rem 0;border-top:2px solid #000}
-.p2-learn li{counter-increment:ln;display:grid;grid-template-columns:4rem 1fr;gap:1rem;padding:1.2rem 0;border-bottom:1px solid #0003}
-.p2-learn li::before{content:counter(ln,decimal-leading-zero);font-size:2rem;font-weight:800;line-height:1;color:var(--pink)}
-.p2-learn b{display:block;text-transform:uppercase;margin-bottom:.2rem}
-.p2-end{background:var(--pink);color:#111;text-align:center}
-.p2-end .it{font-size:clamp(1.4rem,3vw,2.4rem);display:block;margin-bottom:.5rem}
-.p2-end h2{font-size:clamp(4rem,14vw,12rem);margin:0 0 1.5rem}
-.p2-end p{margin:0 auto 1.5rem}
-.p2-next{display:inline-block;margin-top:.5rem;font-weight:800;text-decoration:none;border-bottom:2px solid currentColor}
-@media(max-width:1000px){.p2-bat{grid-template-columns:1fr 1fr}.p2-steps{grid-template-columns:1fr 1fr}.p2-steps li:nth-child(2){border-right:0}.p2-steps li:nth-child(-n+2){border-bottom:2px solid #000}}
-@media(max-width:800px){.p2-asmg,.p2-asmrow,.p2-honest,.p2-wip{grid-template-columns:1fr}.p2-asmg .a1{grid-row:auto}.p2-honest div+div{padding-left:0;border-left:0;border-top:1px solid #0003}
-.p2-grid,.p2-g2,.p2-tree,.p2-asm{grid-template-columns:1fr}.p2-facts{grid-template-columns:1fr 1fr}.p2-obj{max-width:360px;margin:0 auto;width:100%}.p2-vs,.p2-ba,.p2-team{grid-template-columns:1fr}.p2-vs .arrow,.p2-ba .arrow,.p2-team .arrow{transform:rotate(90deg);justify-self:center}.p2-photos{grid-template-columns:1fr 1fr}.p2-renders{grid-template-columns:1fr}.p2-renders .rbig{grid-column:auto;grid-row:auto}}
-@media(max-width:560px){.p2-bat,.p2-steps{grid-template-columns:1fr}.p2-steps li{border-right:0!important;border-bottom:2px solid #000}.p2-steps li:last-child{border-bottom:0}}
-</style></head><body><header class="nav"><a href="index.html">Group 7 &middot; CM3D</a><nav aria-label="Main"><ul><li><a href="index.html">Home</a></li><li class="dd"><a href="fase1.html">Phase 1 &#9662;</a><ul><li><a href="fase1.html#s01">01 &nbsp;The object</a></li><li><a href="fase1.html#s02">02 &nbsp;Disassembly</a></li><li><a href="fase1.html#s03">03 &nbsp;Measuring</a></li><li><a href="fase1.html#s04">04 &nbsp;Modeling</a></li><li><a href="fase1.html#s05">05 &nbsp;Assembly & drawings</a></li><li><a href="fase1.html#s06">06 &nbsp;Challenges</a></li></ul></li><li class="dd"><a href="fase2.html" class="on">Phase 2 &#9662;</a><ul><li><a href="fase2.html#s01">01 &nbsp;The object</a></li><li><a href="fase2.html#s02">02 &nbsp;Disassembly</a></li><li><a href="fase2.html#s03">03 &nbsp;Surfaces</a></li><li><a href="fase2.html#s04">04 &nbsp;Everyone&rsquo;s battle</a></li><li><a href="fase2.html#s05">05 &nbsp;The turning point</a></li><li><a href="fase2.html#s06">06 &nbsp;Teamwork</a></li><li><a href="fase2.html#s07">07 &nbsp;Assembly</a></li><li><a href="fase2.html#s08">08 &nbsp;Renders</a></li><li><a href="fase2.html#s09">09 &nbsp;What we learned</a></li></ul></li><li><a href="fase3.html">Phase 3</a></li><li><a href="nosotros.html">About us</a></li></ul></nav></header><main>
+/* ===== Phase 1 identity: black & white, like the lamp ===== */
+.p1-hero{background:#111;color:#fff;padding:4rem 0 3rem}
+.p1-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:3rem;align-items:center}
+.p1-kick{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;opacity:.7;margin-bottom:1rem}
+.p1-hero h1{font-size:clamp(3rem,9vw,8rem)}
+.p1-hero .sub{margin:.5rem 0 1.5rem}
+.p1-obj{background:radial-gradient(circle at 50% 55%,#4a4a4a 0,#1a1a1a 62%);border-radius:50%;aspect-ratio:1;display:flex;align-items:center;justify-content:center}
+.p1-obj img{width:62%;max-height:90%;object-fit:contain;filter:drop-shadow(0 18px 24px #0008)}
+.p1-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:3rem;padding-top:1.5rem;background:linear-gradient(#fff,#fff) content-box top/100% 2px no-repeat}
+.p1-facts div{font-size:.9rem}.p1-facts b{display:block;font-size:clamp(2.2rem,5vw,4rem);font-weight:800;line-height:1;margin-bottom:.3rem}
+.p1-g3{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem}
+.p1-g3 span{display:block;font-size:3.5rem;font-weight:800;line-height:1}
+.p1-g3 h3{margin:.8rem 0 .6rem}
+.p1-quote{font-size:clamp(1.6rem,3.4vw,2.8rem);font-style:italic;line-height:1.15;letter-spacing:-.02em;max-width:22ch;margin:0 0 1.5rem}
+.p1-why{border-left:6px solid #000;padding-left:1.5rem}
+.p1-team{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin:2rem 0}
+.p1-team figure{background:#fff;border:2px solid #000}
+.p1-team img{width:100%;aspect-ratio:9/14;object-fit:cover;background:#ccc}
+.p1-team figcaption{color:#000;font-size:.95rem;margin:0;padding:1rem 1.2rem 1.2rem}
+.p1-team figcaption b{display:block;font-size:1.15rem;text-transform:uppercase;letter-spacing:-.02em;margin-bottom:.2rem}
+.p1-team figcaption span{display:block;color:var(--mid);font-size:.85rem;margin-top:.3rem}
+.p1-views{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0}
+.p1-views img{aspect-ratio:775/1000;object-fit:cover;background:#eee}
+.p1-steps{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:2rem 0;counter-reset:st;border:2px solid #000;background:#fff}
+.p1-steps li{padding:1.5rem;counter-increment:st;border-right:2px solid #000}.p1-steps li:last-child{border-right:0}
+.p1-steps li::before{content:counter(st);display:block;font-size:3rem;font-weight:800;line-height:1;margin-bottom:.6rem}
+.p1-steps b{display:block;text-transform:uppercase;font-size:1.1rem;margin-bottom:.3rem}
+.p1-fit{background:#000;color:#fff;padding:2rem;margin:2rem 0}
+.p1-fit h3{font-size:clamp(1.5rem,3vw,2.2rem)}.p1-fit p{margin:0}
+.p1-dw{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin:1.5rem 0 2.5rem}
+.p1-dw a{display:block;text-decoration:none;background:#fff;border:2px solid #000;transition:transform .15s,box-shadow .15s}
+.p1-dw a:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 #000}
+.p1-dw img{width:100%;aspect-ratio:4/3;object-fit:contain;background:#fff;border-bottom:2px solid #000}
+.p1-dw div{padding:1rem 1.1rem 1.1rem;font-size:.9rem}
+.p1-dw div b{display:block;font-size:1.25rem;text-transform:uppercase;letter-spacing:-.02em}
+.p1-dw div span{display:block;color:var(--mid);margin:.2rem 0 .5rem}
+.p1-dw em{font-style:normal;font-weight:700;font-size:.8rem;border-bottom:2px solid #000}
+.p1-dw p{font-size:.85rem;margin:0 0 .8rem;color:#000}
+.dwbox{margin:auto;width:min(1200px,96vw);max-width:none;max-height:94vh;padding:0;border:2px solid #000;background:#fff;color:#000}
+.dwbox::backdrop{background:#000d}
+.dwbar{display:flex;flex-wrap:wrap;gap:.6rem 1rem;align-items:center;justify-content:space-between;padding:.7rem 1rem;border-bottom:2px solid #000;background:#fff}
+.dwbar b{text-transform:uppercase;letter-spacing:-.01em}
+.dwbar button,.dwbar a{font:inherit;font-size:.85rem;font-weight:700;background:#fff;color:#000;border:2px solid #000;padding:.3rem .8rem;cursor:pointer;text-decoration:none;display:inline-block}
+.dwbar button:hover,.dwbar a:hover{background:#000;color:#fff}
+.dwbody{overflow:auto;max-height:calc(94vh - 64px)}
+.dwbody img{display:block;width:100%;max-width:none;cursor:zoom-in}
+.dwbox.z .dwbody img{width:240%;cursor:zoom-out}
+.p1-lesson{margin-top:3rem;border:2px solid #000;padding:2rem 2rem 1rem;background:#fff}
+.p1-lesson h3{font-size:clamp(1.6rem,3vw,2.4rem)}
+.p1-lesson ul{list-style:none;margin:1rem 0 1.5rem;max-width:70ch}.p1-lesson li{padding:.7rem 0;border-top:1px solid #0003}
+.p1-end{background:#111;color:#fff;text-align:center}
+.p1-end .it{font-size:clamp(1.4rem,3vw,2.4rem);display:block;margin-bottom:.5rem}
+.p1-end h2{font-size:clamp(4rem,14vw,12rem);margin:0 0 2rem}
+.p1-end p{margin:0 auto 2rem}
+.p1-next{display:inline-block;margin-top:.5rem;font-weight:800;text-decoration:none;border-bottom:2px solid currentColor}
+@media(max-width:1000px){.p1-team{grid-template-columns:1fr 1fr}}
+@media(max-width:800px){.p1-grid,.p1-g3,.p1-steps{grid-template-columns:1fr}.p1-steps li{border-right:0;border-bottom:2px solid #000}.p1-steps li:last-child{border-bottom:0}.p1-facts{grid-template-columns:1fr 1fr}.p1-obj{max-width:360px;margin:0 auto;width:100%}.p1-views{grid-template-columns:1fr 1fr}}
+</style></head><body><header class="nav"><a href="index.html">Group 7 &middot; CM3D</a><nav aria-label="Main"><ul><li><a href="index.html">Home</a></li><li class="dd"><a href="fase1.html" class="on">Phase 1 &#9662;</a><ul><li><a href="fase1.html#s01">01 &nbsp;The object</a></li><li><a href="fase1.html#s02">02 &nbsp;Disassembly</a></li><li><a href="fase1.html#s03">03 &nbsp;Measuring</a></li><li><a href="fase1.html#s04">04 &nbsp;Modeling</a></li><li><a href="fase1.html#s05">05 &nbsp;Assembly & drawings</a></li><li><a href="fase1.html#s06">06 &nbsp;Challenges</a></li></ul></li><li class="dd"><a href="fase2.html">Phase 2 &#9662;</a><ul><li><a href="fase2.html#s01">01 &nbsp;The object</a></li><li><a href="fase2.html#s02">02 &nbsp;Disassembly</a></li><li><a href="fase2.html#s03">03 &nbsp;Surfaces</a></li><li><a href="fase2.html#s04">04 &nbsp;Everyone&rsquo;s battle</a></li><li><a href="fase2.html#s05">05 &nbsp;The turning point</a></li><li><a href="fase2.html#s06">06 &nbsp;Teamwork</a></li><li><a href="fase2.html#s07">07 &nbsp;Assembly</a></li><li><a href="fase2.html#s08">08 &nbsp;Renders</a></li><li><a href="fase2.html#s09">09 &nbsp;What we learned</a></li></ul></li><li><a href="fase3.html">Phase 3</a></li><li><a href="nosotros.html">About us</a></li></ul></nav></header><main>
 
-<section class="p2-hero"><div class="wrap p2-grid"><div>
-<p class="p2-kick">Phase 2 [M2] &middot; Consolidation &middot; Surfaces &middot; Delivered 17 Nov</p>
-<h1>Steam iron</h1>
-<p class="sub it">The nightmare of complexity.</p>
-<p>After the lamp, we raised the bar on purpose: an iron with a water reservoir and a boiler base. On paper, an everyday household object. In practice, organic surfaces and complex ergonomics, something none of us had ever modeled.</p>
-</div><figure class="p2-obj"><img src="img/iron.png" alt="The steam iron on its boiler base"></figure></div>
-<div class="wrap p2-facts"><div><b>0</b>times any of us had used surfaces before</div><div><b>100s</b>of failed lofts and boundaries</div><div><b>4</b>stages of modeling grief</div><div><b>1</b>master solid that saved the iron</div></div></section>
+<section class="p1-hero"><div class="wrap p1-grid"><div>
+<p class="p1-kick">Phase 1 [M1] &middot; Reverse engineering &middot; Delivered 20 Oct</p>
+<h1>Desk lamp</h1>
+<p class="sub it">The illusion of simplicity.</p>
+<p>The OPLED 55: a foldable white desk lamp with a black frame and a flat, minimal shell. <b>&ldquo;It is too easy to model.&rdquo;</b> That was the first thing we heard, and the first thing we thought. The next weeks proved us wrong.</p>
+</div><figure class="p1-obj"><img src="img/lamp.png" alt="The OPLED 55 desk lamp, unfolded. Looks easy."></figure></div>
+<div class="wrap p1-facts"><div><b>24</b>different parts</div><div><b>41</b>pieces, counting every screw</div><div><b>270</b>mm tall, fully open</div><div><b>6</b>technical drawings</div></div></section>
 
-<section><div class="wrap"><h2>Our goals<br><span class="it">for this phase</span></h2><div class="p2-g2">
-<div><span>A</span><h3>Go further</h3><p>The lamp taught us SolidWorks. For this phase we wanted a harder object on purpose: curved, organic, with parts that wrap around each other instead of sitting flat.</p></div>
-<div><span>B</span><h3>Learn surfaces</h3><p>None of us had ever used them. A hollow tank and a shell with no straight lines left us no choice: this was the phase to learn surface modeling.</p></div>
+<section><div class="wrap"><h2>Our goals<br><span class="it">for this phase</span></h2><div class="p1-g3">
+<div><span>A</span><h3>Learn how SolidWorks thinks</h3><p>Some of us came from Inventor, some from a design degree. We wanted to stop fighting the software and start planning parts the way it expects.</p></div>
+<div><span>B</span><h3>Measure what you can&rsquo;t see</h3><p>Ribs, screw posts and hinge ends are hidden inside the shell. Our goal was to capture them with a caliper, to the millimetre.</p></div>
+<div><span>C</span><h3>An assembly that really folds</h3><p>Not just parts that look right, but a lamp that folds like the real one, with drawings someone else could use to make it.</p></div>
 </div></div></section>
 
 <section id="s01" class="grey"><div class="wrap"><div class="big"><span>01</span><h2>The object</h2></div>
-<p>A steam iron with a transparent water tank and a boiler base. If the lamp was the illusion of simplicity, this was the opposite: an object that looks complex, and is even more complex inside.</p>
-<div class="p2-vs"><figure class="l"><img src="img/lamp.png" alt="Phase 1: the desk lamp"><figcaption><b>Phase 1</b>The illusion of simplicity.</figcaption></figure><span class="arrow" aria-hidden="true">&rarr;</span><figure class="i"><img src="img/iron.png" alt="Phase 2: the steam iron"><figcaption><b>Phase 2</b>The nightmare of complexity.</figcaption></figure></div>
-<div class="cols"><div><p class="p2-quote">&ldquo;Demos um passo maior do que a perna.&rdquo;</p><p>We took a step bigger than our leg. Portuguese says it better. Looking back, we did not expect this much complexity: we had never used surfaces, and we did not yet have the skills for this kind of modeling.</p></div>
-<figure><img src="img/img/f2_real1.jpg" alt="The real iron, from the side" loading="lazy" style="aspect-ratio:4/5;object-fit:cover"><figcaption>The real thing, from the side.</figcaption></figure></div>
+<div class="cols"><div>
+<p class="p1-quote">&ldquo;This is too easy to model for a group of four.&rdquo;</p>
+<div class="p1-why"><p>That is what our teachers told us when we picked this lamp. Honestly, we thought the same. <b>We kept it anyway, out of pure stubbornness.</b> We wanted to find out if a product this simple on the outside was just as simple on the inside.</p>
+<p>The OPLED 55 is an articulated lamp with 24 LEDs, a chrome reflector, a transparent cover, three folding arms, hinge pieces, screws, a switch, a power cable and a small driver circuit. Four people, four sets of parts, one assembly to rebuild.</p></div>
+</div><figure><img src="img/f1_product.jpg" alt="The OPLED 55, open and folded" loading="lazy"><figcaption>The OPLED 55, open and folded. Minimal on the outside.</figcaption></figure></div>
 </div></section>
 
-<section id="s02"><div class="wrap"><div class="big"><span>02</span><h2>Disassembly</h2></div>
-<p>We opened the iron and sorted everything out again: shells, frame, tank, base and a lot of small parts. Four people, four sets of parts.</p>
-<div class="p2-photos">
-<figure><img src="img/img/f2_parts.jpg" alt="Shells, frame and small parts" loading="lazy"><figcaption>Shells, frame and small parts.</figcaption></figure>
-<figure><img src="img/img/f2_tank.jpg" alt="Tank and base parts" loading="lazy"><figcaption>Tank and base parts.</figcaption></figure>
-<figure><img src="img/img/f2_inside.jpg" alt="Inside the iron" loading="lazy"><figcaption>Inside the iron.</figcaption></figure>
-<figure><img src="img/img/f2_real2.jpg" alt="The iron seen from above" loading="lazy"><figcaption>Seen from above.</figcaption></figure>
-</div>
-<div class="p2-mistake"><h3>The classic beginner mistake</h3><p>We used the same strategy as in Phase 1: split the parts and model them in isolation. It worked for a lamp made of flat pieces. In an organic product, everything is connected to the millimetre. If one part&rsquo;s curves do not talk to the next, the whole project collapses.</p></div>
-</div></section>
-
-<section id="s03" class="grey"><div class="wrap"><div class="big"><span>03</span><h2>Surfaces</h2></div>
-<p class="p2-quote" style="max-width:none">The elephant in the room.</p>
-<p>The hardest part was never the details. It was finding the base geometry: how do you even start a curved surface? We spent more time on that than on everything else, racing the clock with a lot of trial and error and a few technical dead ends. It pushed us out of our comfort zone, to the limit. It is also where we learned the most.</p>
-<div class="p2-ba"><figure><img src="img/img/f2_first.jpg" alt="Our first attempt at the iron body" loading="lazy"><figcaption>First shape</figcaption></figure><span class="arrow" aria-hidden="true">&rarr;</span><figure><img src="img/img/f2_final1.jpg" alt="The final shape of the iron body" loading="lazy"><figcaption>Final shape</figcaption></figure></div>
-<div class="p2-tree"><div><h3>Red means trouble</h3><p>This is our feature tree, as it really was. Every red mark is a feature that failed to rebuild. We decided to show it instead of hiding it: it is the most honest picture of this phase.</p><p class="p2-quote" style="font-size:clamp(1.3rem,2.4vw,1.9rem)">&ldquo;It may not be perfect, but it&rsquo;s what we fought for and were capable of doing.&rdquo;</p></div><figure><img src="img/img/f2_tree.jpg" alt="The SolidWorks feature tree, with many errors marked in red" loading="lazy"><figcaption>The feature tree. Red means trouble.</figcaption></figure></div>
-</div></section>
-
-<section id="s04"><div class="wrap"><div class="big"><span>04</span><h2>Everyone&rsquo;s battle</h2></div>
-<p>Each of us fought a different part of the iron, and a different part of the software.</p>
-<div class="p2-bat">
-<article class="p2-card"><div class="im"><img src="img/img/f2_martin1.jpg" alt="Martín's tank surface on the elevation plane" loading="lazy"><img src="img/img/f2_martin_tank.jpg" alt="Martín's water tank" loading="lazy"></div><div class="t"><h3>Martín</h3><span class="role">The water tank</span><p>Started the transparent tank as a solid, then realised it was hollow and needed surfaces. The curved connecting section and aligning the base details with the reservoir were his big fight.</p><p class="q">&ldquo;It took me forever to learn the tools from scratch.&rdquo;</p></div></article>
-<article class="p2-card"><div class="im one"><img src="img/img/f2_joao.jpg" alt="João's base piece, the curved junction" loading="lazy" style="aspect-ratio:2/1;object-fit:cover"></div><div class="t"><h3>João</h3><span class="role">The base</span><p>One of his biggest academic challenges so far. Parts modeled separately met in the assembly as a mess of different waves and diameters, and the base kept changing size.</p><p class="q">&ldquo;Martín&rsquo;s measurements were inner and mine were outer, and nothing fit!&rdquo;</p></div></article>
-<article class="p2-card"><div class="im"><img src="img/img/f2_lucia_tampa.jpg" alt="Lucía's iron cover piece" loading="lazy"><img src="img/img/f2_lucia_small.jpg" alt="Lucía's small parts: buttons and interior pieces" loading="lazy"></div><div class="t"><h3>Lucía</h3><span class="role">Handle &amp; small parts</span><p>Hundreds of attempts with lofts and boundaries, a constant fight with her own perfectionism, and a new software on top. Tutoring sessions, a first for her, were the lifeline.</p><p class="q">&ldquo;The tutoring sessions saved me from going crazy.&rdquo;</p></div></article>
-<article class="p2-card"><div class="im"><img src="img/img/f2_ines_parts.jpg" alt="Inês's parts of the main body" loading="lazy"><img src="img/img/f2_planes.jpg" alt="Inês's three planes and loft" loading="lazy"></div><div class="t"><h3>Inês</h3><span class="role">The main body</span><p>Went through four stages before finding a method that worked, and that method became the backbone of the whole iron.</p><p class="q"><a href="#s05" style="font-style:normal;font-weight:700">Her four stages &darr;</a></p></div></article>
+<section id="s02"><div class="wrap"><div class="big"><span>02</span><h2>Disassembly</h2></div><p>The logical place to start: take it apart. Once everything was spread on the table, there were far more parts than the outside suggests, including internal pieces we never expected in an object this simple.</p><figure><img src="img/despiece.jpg" alt="Everything the lamp is made of." loading="lazy"><figcaption>All parts laid out after disassembly.</figcaption></figure>
+<h3 style="margin-top:3rem">Who modeled what</h3>
+<p>We split the parts by experience. Inês and João had used SolidWorks in their design degree, so they took the most complex areas. Lucía and Martín came from Inventor, so they started with the arms and connecting parts, and learned the software on the way.</p>
+<div class="p1-team">
+<figure><img src="img/head.jpg" alt="Inês's parts: head shell, frame, LED board, reflector and cover" loading="lazy"><figcaption><b>Inês &middot; The head</b>The light part: shell, frame, LED board, reflector and transparent cover.<span>Most complex area. Previous SolidWorks experience.</span></figcaption></figure>
+<figure><img src="img/base.jpg" alt="João's parts: base shells, frame and switch" loading="lazy"><figcaption><b>João &middot; The base</b>Base shells, frame, switch and the connections to the plug.<span>Most complex area. Previous SolidWorks experience.</span></figcaption></figure>
+<figure><img src="img/arms.jpg" alt="Lucía's parts: the articulated arms, washer and knobs" loading="lazy"><figcaption><b>Lucía &middot; The arms</b>The articulated arms, plus a washer and the knob screws.<span>Came from Inventor. Learned SolidWorks on these parts.</span></figcaption></figure>
+<figure><img src="img/joints.jpg" alt="Martín's parts: connecting pieces, washers, screws and cable" loading="lazy"><figcaption><b>Martín &middot; The connections</b>The pieces that join head and arms, washers, screws and the power cable.<span>Came from Inventor. Learned SolidWorks on these parts.</span></figcaption></figure>
 </div></div></section>
 
-<section id="s05" class="grey"><div class="wrap"><div class="big"><span>05</span><h2>The turning point</h2></div>
-<p>Inês&rsquo;s four stages of modeling grief. The first three failed. The fourth changed how the whole group modeled the iron.</p>
-<ol class="p2-steps">
-<li class="no"><div class="ic"><img src="img/img/f2_stage1.jpg" alt="The first shape, modeled as a separate part" loading="lazy"></div><div class="tx"><b>Separate parts</b>Modeling each part on its own. The geometry never came out right.<span class="res">Failed</span></div></li>
-<li class="no"><div class="ic"><img src="img/img/f2_stage2.jpg" alt="The profile traced over a photo of the iron" loading="lazy"></div><div class="tx"><b>Sketch over photos</b>Tracing pictures of the iron. It created weird, alien shapes.<span class="res">Failed</span></div></li>
-<li class="no"><div class="ic"><img src="img/img/f2_stage3b.jpg" alt="The general shape extruded in one go" loading="lazy"></div><div class="tx"><b>Brute force</b>Out of pure rage, the general shape drawn and extruded &ldquo;&agrave; bruta&rdquo;.<span class="res">Failed</span></div></li>
-<li class="win"><div class="ic"><img src="img/img/f2_planes.jpg" alt="Three planes with a loft between them" loading="lazy"></div><div class="tx"><b>Three planes</b>A deep breath, and a plan: three planes, one loft, one solid.<span class="res ok">Worked</span></div></li>
-</ol>
-<div class="cols"><div class="p2-recipe"><h3>The method that worked</h3><ol><li>Three planes: top, bottom and the side curve.</li><li>A loft between them.</li><li>Mirror it.</li><li>Model the iron as one single solid.</li><li>Split lines to cut it into the real parts.</li></ol></div>
-<div><p>This is also our answer to the feedback from Phase 1. Our teachers told us our sketches were too complex. Here, each step is a simple, closed sketch on its own plane, and the parts come from one solid instead of being drawn one by one.</p><figure><img src="img/img/f2_side.jpg" alt="The side profile cut from the main solid" loading="lazy"><figcaption>The side profile, cut from the main solid with split lines.</figcaption></figure></div></div>
+<section id="s03" class="dark"><div class="wrap cols"><div><div class="big"><span>03</span><h2>Measuring</h2></div><p>Everything was measured by hand with a caliper, because the details decide whether the 3D assembly fits. Ribs, screw posts, hinge ends: none of them are visible from outside.</p><p>This is where the group&rsquo;s big conclusion came from: the difficulty was never the shell. If those tiny fittings were not modeled with rigour in every part, the final assembly would be a disaster.</p></div><figure><img src="img/caliper.jpg" alt="Caliper reading, again." loading="lazy"><figcaption>Measuring with a caliper.</figcaption></figure></div>
+<div class="wrap"><figure style="margin-top:2rem"><img src="img/f1_details.jpg" alt="Close-ups of the small internal details: ribs, screw posts, hinge ends, LEDs and the reflector" loading="lazy"><figcaption>Too many tiny details. Every one of them had to be measured.</figcaption></figure>
+<div class="gal"><figure><img src="img/ribs.jpg" alt="Inside the base cover: ribs and posts" loading="lazy"><figcaption>Inside of the light part cover with ribs and screw posts.</figcaption></figure><figure><img src="img/reflector1.jpg" alt="Reflector: 24 cups to measure" loading="lazy"><figcaption>The chrome reflector.</figcaption></figure><figure><img src="img/reflector2.jpg" alt="Same reflector, same patience" loading="lazy"><figcaption>Reflector seen from another angle.</figcaption></figure></div></div></section>
+
+<section id="s04"><div class="wrap"><div class="big"><span>04</span><h2>Modeling</h2></div><p>Each part was modeled separately in SolidWorks: 24 different parts, 41 pieces once every screw is counted. The first week was mostly learning how the software thinks. Small discoveries saved hours: with Linear Pattern and Mirror, the 24 LED holes did not have to be drawn and cut 24 times.</p><div class="cols" style="margin:2rem 0"><figure><img src="img/lamp.jpg" alt="Real" loading="lazy"><figcaption>The real lamp.</figcaption></figure><figure><img src="img/r07.jpg" alt="Digital" loading="lazy"><figcaption>The SolidWorks assembly.</figcaption></figure></div>
+<div class="p1-views"><figure><img src="img/f1_front.jpg" alt="Front view of the 3D model" loading="lazy"><figcaption>Front.</figcaption></figure><figure><img src="img/f1_persp.jpg" alt="Perspective view of the 3D model" loading="lazy"><figcaption>Perspective.</figcaption></figure><figure><img src="img/f1_side.jpg" alt="Side view of the 3D model" loading="lazy"><figcaption>Side.</figcaption></figure></div>
+<div class="gal r"><figure><img src="img/r05.jpg" alt="The head, LEDs included" loading="lazy"><figcaption>Lamp head with LEDs and cover.</figcaption></figure><figure><img src="img/r11.jpg" alt="Base and cable" loading="lazy"><figcaption>Base seen from above with the power cable.</figcaption></figure><figure><img src="img/r02.jpg" alt="Unfolded" loading="lazy"><figcaption>Lamp unfolded, head with LEDs.</figcaption></figure></div><div class="gal"><figure><img src="img/sw1.jpg" alt="Work in progress: sketch and holes" loading="lazy"><figcaption>Part sketch in SolidWorks.</figcaption></figure><figure><img src="img/sw3.jpg" alt="Work in progress: a boss" loading="lazy"><figcaption>Boss on a plate in SolidWorks.</figcaption></figure></div></div></section>
+
+<section id="s05" class="grey"><div class="wrap"><div class="big"><span>05</span><h2>Assembly &amp; drawings</h2></div><p>The assembly is where everything was put to the test. If we had not paid attention to the small details from day one, this is where it would have collapsed.</p>
+<h3 style="margin-top:2.5rem">How we built it: from the base up</h3>
+<ol class="p1-steps"><li><b>The base</b>The base goes in first and stays fixed. Everything else is built on top of it.</li><li><b>Arms &amp; joints</b>The folding arms are mounted on the base hinges, with their washers, screws and knobs.</li><li><b>The head</b>Last, the connecting pieces and the head, with its LED board, reflector and cover.</li></ol>
+<div class="p1-fit"><h3>Why it fitted the first time</h3><p>Four people modeled the parts separately, and they still fitted together. Not by luck: we shared our measurements from the start, so wherever one person&rsquo;s part met another&rsquo;s, both were built from the same numbers.</p></div>
+<figure><video controls muted loop autoplay playsinline preload="metadata" poster="img/assembly_poster.jpg"><source src="img/assembly.mp4" type="video/mp4"></video><figcaption>The 3D assembly.</figcaption></figure>
+<div class="cols" style="margin-top:2rem"><figure><img src="img/f1_exploded.jpg" alt="Exploded view of the lamp" loading="lazy"><figcaption>Exploded view of the lamp, from the head down to the base.</figcaption></figure><div>
+<h3>One part, one drawing, one person</h3>
+<p>The drawings were a group job. Each of us drew the part that was the hardest to model in our own set, on an A3 sheet, with its own choice of section views: full sections that cut straight through the part, and offset sections whose cutting line steps to pass through holes and hinges that a straight cut would miss.</p>
+<p>The assembly drawing, with its bill of materials, and the exploded view with numbered parts were made together.</p>
+<p><b>Click any drawing</b> to see it here and zoom in, or open the original PDF.</p></div></div>
+<div class="p1-dw">
+<a class="dwl" href="docs/Peca_Luz_2.pdf" data-img="img/d_Peca_Luz_2_hd.jpg" data-title="Peça Luz 2 &middot; Inês"><img src="img/d_Peca_Luz_2.jpg" alt="Part drawing: Peça Luz 2" loading="lazy"><div><b>Peça Luz 2</b><span>Inês &middot; the lamp head</span><p>The frame of the head, with the hinge tube at one end. Scale 1:2. Two full sections: C-C across the hinge end, D-D along the whole piece.</p><em>View drawing &rarr;</em></div></a>
+<a class="dwl" href="docs/Base_Cima.pdf" data-img="img/d_Base_Cima_hd.jpg" data-title="Base Cima &middot; João"><img src="img/d_Base_Cima.jpg" alt="Part drawing: Base Cima" loading="lazy"><div><b>Base Cima</b><span>João &middot; the base</span><p>The top shell of the base. Scale 1:1. An offset section (A-A) that steps to cut through a hinge mount, and a full section (B-B) through the screw posts.</p><em>View drawing &rarr;</em></div></a>
+<a class="dwl" href="docs/Peca_Grossa_Larga_2.pdf" data-img="img/d_Peca_Grossa_Larga_2_hd.jpg" data-title="Peça Grossa Larga 2 &middot; Lucía"><img src="img/d_Peca_Grossa_Larga_2.jpg" alt="Part drawing: Peça Grossa Larga 2" loading="lazy"><div><b>Peça Grossa Larga 2</b><span>Lucía &middot; the arms</span><p>One of the long, thin folding arms, 107 mm between hinge centres. Scale 1:1. Two small offset sections (A-A, B-B) through the holes near each end.</p><em>View drawing &rarr;</em></div></a>
+<a class="dwl" href="docs/Peca_Grande.pdf" data-img="img/d_Peca_Grande_hd.jpg" data-title="Peça Grande &middot; Martín"><img src="img/d_Peca_Grande.jpg" alt="Part drawing: Peça Grande" loading="lazy"><div><b>Peça Grande</b><span>Martín &middot; the connections</span><p>The thicker piece that carries the head, with three screw holes. Scale 1:1. A full section along its length (B-B) and an offset section (A-A) through the centre hole.</p><em>View drawing &rarr;</em></div></a>
+</div>
+<h3>Made together</h3>
+<div class="p1-dw">
+<a class="dwl" href="docs/Assembly_Candeeiro.pdf" data-img="img/d_Assembly_Candeeiro_hd.jpg" data-title="Assembly drawing &middot; Group 7"><img src="img/d_Assembly_Candeeiro.jpg" alt="Assembly drawing" loading="lazy"><div><b>Assembly drawing</b><span>The whole lamp</span><p>Three views of the lamp at scale 1:2 with its main dimensions, a bill of materials with 24 parts, and a note: maximum height 270 mm.</p><em>View drawing &rarr;</em></div></a>
+<a class="dwl" href="docs/Vista_Explodida_Candeeiro.pdf" data-img="img/d_Vista_Explodida_Candeeiro_hd.jpg" data-title="Exploded view &middot; Group 7"><img src="img/d_Vista_Explodida_Candeeiro.jpg" alt="Exploded view drawing" loading="lazy"><div><b>Exploded view</b><span>Every part, numbered</span><p>An A2 sheet at scale 1:2: 23 numbered balloons with their quantities, from the base (1) up to the eleven mini screws (23).</p><em>View drawing &rarr;</em></div></a>
+</div>
+<dialog class="dwbox" id="dwbox" aria-labelledby="dwtitle"><div class="dwbar"><b id="dwtitle">Drawing</b><div><button type="button" id="dwzoom">Zoom +</button> <a id="dwpdf" href="#" target="_blank" rel="noopener">Open PDF</a> <button type="button" id="dwclose" aria-label="Close">Close &times;</button></div></div><div class="dwbody"><img id="dwimg" src="" alt=""></div></dialog>
 </div></section>
 
-<section id="s06"><div class="wrap"><div class="big"><span>06</span><h2>Teamwork</h2></div>
-<p>When time was running out and nothing seemed to fit, Inês and Lucía stopped working separately. Starting from Inês&rsquo;s main solid block, they cut Lucía&rsquo;s parts directly out of it, so they had to fit together.</p>
-<div class="p2-team">
-<figure><img src="img/img/f2_team_main.jpg" alt="Inês's main body" loading="lazy" style="object-fit:contain;background:#fff"><figcaption><b>1.</b> Inês&rsquo;s main body</figcaption></figure><span class="arrow" aria-hidden="true">&rarr;</span>
-<figure><img src="img/img/f2_team1.jpg" alt="A part cut from the main block" loading="lazy"><figcaption><b>2.</b> Cut from the main block</figcaption></figure><span class="arrow" aria-hidden="true">&rarr;</span>
-<figure><img src="img/img/f2_team2.jpg" alt="Another part cut from the main block" loading="lazy"><figcaption><b>3.</b> And another, same profile</figcaption></figure>
-</div>
-<p>It might not be the textbook strategy, but with little time left it was the one that finally made the profiles match. And it taught us something we will use from now on: start from one master model, then cut the parts out of it.</p>
-</div></section>
+<section id="s06"><div class="wrap"><div class="big"><span>06</span><h2>Challenges</h2></div><p>The hard part was never the outer shape. It was the tiny details inside, and learning a new program while measuring to the millimetre.</p><div class="cards"><div class="card"><h3>Inês</h3><b>Challenge</b><p>Precision in the lamp head layers.</p><b>Learning</b><p>Linear Pattern and Mirror save hours.</p></div><div class="card"><h3>João</h3><b>Challenge</b><p>Turning 1:1 physical measurements into the digital model.</p><b>Learning</b><p>New detailing tools and error-free assemblies.</p></div><div class="card"><h3>Lucía</h3><b>Challenge</b><p>Moving from Inventor to SolidWorks.</p><b>Learning</b><p>Quick adaptation to a new interface and workflow.</p></div><div class="card"><h3>Martín</h3><b>Challenge</b><p>The learning curve and complex geometries.</p><b>Learning</b><p>How SolidWorks thinks compared with other 3D programs.</p></div></div>
+<div class="p1-lesson"><h3>What the feedback taught us</h3>
+<p>Our teachers pointed out the main problem in our models: sketches that were too complex, with contours inside other contours. In SolidWorks it is better to keep sketches simple and closed, and to start a new sketch for every feature.</p>
+<ul><li><b>One sketch, one feature.</b> Easier to edit, and one change no longer breaks half of the feature tree.</li>
+<li><b>Closed contours only.</b> No loose lines and no profiles nested inside each other.</li>
+<li><b>Every program has its own logic.</b> Other software is friendlier when you reuse one sketch for several operations. SolidWorks is not, so we plan our sketches for it.</li></ul></div></div></section>
 
-<section id="s07" class="grey"><div class="wrap"><div class="big"><span>07</span><h2>Assembly</h2></div>
-<p>The moment of truth: dozens of parts, modeled by four people, had to meet in one assembly. A shell wrapped around a frame, a transparent tank sliding into its base, a handle on two pivots, a cable and a plug, and many internal details nobody sees from outside.</p>
-<div class="p2-asmg">
-<figure class="a1"><img src="img/img/f2_asm1.jpg" alt="The assembly with the water tank pulled out of the base" loading="lazy"><figcaption>The water tank slides out of the base, as in the real product.</figcaption></figure>
-<figure><img src="img/img/f2_asm2.jpg" alt="The full assembly: base, iron, cable and plug" loading="lazy"><figcaption>The complete set, cable and plug included.</figcaption></figure>
-<figure><img src="img/img/f2_asm3.jpg" alt="Iron and base seen from behind" loading="lazy"><figcaption>Iron and base, from behind.</figcaption></figure>
-</div>
-<div class="p2-asmrow">
-<figure><img src="img/img/f2_asm4.jpg" alt="Close-up of the tank fitting into the base under the handle" loading="lazy" style="width:100%;border:2px solid #000"><figcaption>Close-up: the tank fitting into the base, under the handle pivot.</figcaption></figure>
-<div><h3>Not perfect. Honest.</h3><p>Our assembly is not flawless, and we are not going to pretend it is. With this many parts, this many internal details and such tight fits between curved surfaces, some errors were inevitable: a few parts overlap slightly, and some had to be forced into place to close the assembly.</p><p>We decided to show it as it is. It is the honest result of our first time with surfaces, and every one of those errors taught us something.</p></div>
-</div>
-<div class="p2-honest">
-<div><b>Many parts</b><p>Shells, frame, tank, base, handle, buttons, cable, plug and interior pieces, all from four different people.</p></div>
-<div><b>Tight fits</b><p>Curved surfaces meeting curved surfaces, where a fraction of a millimetre is the difference between fitting and clashing.</p></div>
-<div><b>Inner details</b><p>Ribs, clips and channels inside the tank and the base that had to line up with parts modeled by someone else.</p></div>
-</div>
-<div class="p2-verdict"><h3>The result</h3><p>Even with its errors and forced fits, the assembly works as a whole: the iron, its base, the removable tank, the handle and the cable come together into a product that reads exactly like the real one. For our first time with surfaces and an object this complex, we are very proud of it.</p></div>
-<div class="p2-wip"><div><h3>Work in progress</h3><p>The assembly taking shape in SolidWorks, part by part.</p></div><figure><video autoplay muted loop playsinline preload="metadata" poster="img/img/f2_video_crop_poster.jpg"><source src="img/img/f2_video_crop.mp4" type="video/mp4"></video></figure></div>
-</div></section>
-
-<section id="s08"><div class="wrap"><div class="big"><span>08</span><h2>Renders</h2></div>
-<p>Once the assembly was closed, João took it into rendering: materials, light and camera, to show the iron the way a product photo would. Pink and white, like the real one.</p>
-<figure class="p2-spin" id="spin"><video autoplay muted loop playsinline preload="auto" poster="img/img/f2_render7.jpg"><source src="img/img/f2_render360.mp4" type="video/mp4" onerror="document.getElementById('spin').classList.add('empty')"></video><figcaption>360&deg; render of the iron and its base.</figcaption></figure>
-<div class="p2-renders">
-<figure class="slot rbig" data-empty="Render coming soon"><img src="img/img/f2_render7.jpg" alt="The iron in front of its base." loading="lazy" onerror="this.parentNode.classList.add('empty')"><figcaption>The iron in front of its base.</figcaption></figure>
-<figure class="slot" data-empty="Render coming soon"><img src="img/img/f2_render2.jpg" alt="Side view, handle raised." loading="lazy" onerror="this.parentNode.classList.add('empty')"><figcaption>Side view, handle raised.</figcaption></figure>
-<figure class="slot" data-empty="Render coming soon"><img src="img/img/f2_render3.jpg" alt="Three-quarter view." loading="lazy" onerror="this.parentNode.classList.add('empty')"><figcaption>Three-quarter view.</figcaption></figure>
-<figure class="slot" data-empty="Render coming soon"><img src="img/img/f2_render8.jpg" alt="The complete set: the iron and its base." loading="lazy" onerror="this.parentNode.classList.add('empty')"><figcaption>The complete set: the iron and its base.</figcaption></figure>
-<figure class="slot" data-empty="Render coming soon"><img src="img/img/f2_render5.jpg" alt="Detail: the handle pivot." loading="lazy" onerror="this.parentNode.classList.add('empty')"><figcaption>Detail: the handle pivot.</figcaption></figure>
-<figure class="slot" data-empty="Render coming soon"><img src="img/img/f2_render4.jpg" alt="Front view." loading="lazy" onerror="this.parentNode.classList.add('empty')"><figcaption>Front view.</figcaption></figure>
-<figure class="slot" data-empty="Render coming soon"><img src="img/img/f2_render1.jpg" alt="The base unit with the handle and the transparent tank." loading="lazy" onerror="this.parentNode.classList.add('empty')"><figcaption>The base unit with the handle and the transparent tank.</figcaption></figure>
-<figure class="slot" data-empty="More renders coming soon"><img src="img/img/f2_render9.jpg" alt="Render." loading="lazy" onerror="this.parentNode.classList.add('empty')"><figcaption>Render.</figcaption></figure>
-<figure class="slot" data-empty="More renders coming soon"><img src="img/img/f2_render10.jpg" alt="Render." loading="lazy" onerror="this.parentNode.classList.add('empty')"><figcaption>Render.</figcaption></figure>
-</div>
-</div></section>
-
-<section id="s09" class="grey"><div class="wrap"><div class="big"><span>09</span><h2>What we learned</h2></div>
-<p>Our final model is not industrial perfection. But if we started this project tomorrow, with what we know now, we would do everything differently.</p>
-<ol class="p2-learn">
-<li><div><b>Plan the whole shape first</b>Before modeling any part, decide how the full object is built: its planes, its main curves, its master solid.</div></li>
-<li><div><b>One solid, then split lines</b>For organic products, model the body as one piece and cut the parts from it. Parts made in isolation will not meet.</div></li>
-<li><div><b>Simple sketches, closed contours</b>One new sketch per feature, as our teachers told us after Phase 1. It makes failures easier to find and fix.</div></li>
-<li><div><b>Agree on inner and outer measurements</b>Half of our assembly problems came from one person measuring inside and another outside.</div></li>
-<li><div><b>Surfaces for hollow parts, from day one</b>A tank is a skin, not a block. Starting it as a solid cost us days.</div></li>
-<li><div><b>Ask early</b>Tutoring sessions are not a last resort. Go before you are stuck.</div></li>
-</ol>
-<p>Failing, redoing things ten times, turning to tutorials and squeezing the software gave us a new level of modeling literacy. The process wins over the result.</p>
-</div></section>
-
-<section class="p2-end"><div class="wrap"><span class="it">Does our work have flaws?</span><h2>Yes.</h2>
-<p>Are details missing? Yes, too. It is not the result we dreamed of, but it is proof of a lot of hard work. We don&rsquo;t feel we failed: we feel we learned. And it is a project we never want to see again, so in Phase 3 we want to explore something that won&rsquo;t keep us awake at night like surfaces did.</p>
-<a class="p2-next" href="fase3.html">Next: Phase 3 &rarr;</a></div></section>
+<section class="p1-end"><div class="wrap"><span class="it">So, was this lamp really that easy to model?</span><h2>Hell no.</h2>
+<p>The minimalist shell was the biggest trap of the project: it hid a maze of tiny details. Good design can make inside complexity invisible. Rebuilding it digitally, to the millimetre, is anything but easy. The illusion of simplicity, demystified.</p>
+<a class="p1-next" href="fase2.html">Next: Phase 2, the iron &rarr;</a></div></section>
 </main><footer><div class="wm">Group 7</div><div class="g">
 <div><h4>Universidade de Aveiro</h4>Mestrado em Engenharia e Design de Produto<br>Conceção e Modelação 3D &middot; 2026/27</div>
 <div><h4>Teachers</h4>João Oliveira<br>Daniel Rodrigues</div>
 <div><h4>Group</h4>Inês Santos &middot; João Almeida<br>Lucía Expósito &middot; Martín Martínez</div>
 <div><h4>Contact us</h4><a href="mailto:grupo7.cm3d@example.com">grupo7.cm3d@example.com</a><br>Questions, feedback, or a lamp you want modeled.</div></div>
 <p style="font-size:0.8rem; opacity:0.7; max-width:60ch; margin-top:2rem;"><strong>AI use statement.</strong> Generative AI (Claude, Anthropic) supported the development of this website and the proofreading/translation of some texts. All 3D modeling, measurements, assemblies, technical drawings, renders and photographs are the group's own work. The Phase 3 placeholder image was generated with AI. All content was reviewed by the group. <a href="nosotros.html#ai">Read more</a>.</p>
-</footer></body></html>
+</footer>
+<script>
+/* Drawing viewer: opens the drawing in large size; without JavaScript the links open the PDF */
+(function(){var d=document.getElementById('dwbox');if(!d||!d.showModal)return;
+var img=document.getElementById('dwimg'),t=document.getElementById('dwtitle'),pdf=document.getElementById('dwpdf'),z=document.getElementById('dwzoom');
+function zoom(on){d.classList.toggle('z',on);z.textContent=on?'Zoom \u2212':'Zoom +'}
+document.querySelectorAll('.dwl').forEach(function(a){a.addEventListener('click',function(e){
+  if(e.ctrlKey||e.metaKey||e.shiftKey)return;e.preventDefault();
+  img.src=a.dataset.img;img.alt=a.querySelector('img').alt;t.innerHTML=a.dataset.title;pdf.href=a.getAttribute('href');zoom(false);d.showModal();});});
+z.addEventListener('click',function(){zoom(!d.classList.contains('z'))});
+img.addEventListener('click',function(){zoom(!d.classList.contains('z'))});
+document.getElementById('dwclose').addEventListener('click',function(){d.close()});
+d.addEventListener('click',function(e){if(e.target===d)d.close()});
+})();
+</script></body></html>
